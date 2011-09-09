@@ -45,6 +45,7 @@ A fast and advanced text editor with nice plugins for KDE 4.
 %_kde_libdir/kde4/katetabbarextensionplugin.so
 %_kde_libdir/kde4/katetextfilterplugin.so
 %_kde_libdir/kde4/ktexteditor_python-encoding.so
+%_kde_libdir/kde4/ktexteditor_acomment.so
 %_kde_libdir/kde4/plasma_applet_katesession.so
 %_kde_libdir/kde4/katebuildplugin.so
 %_kde_libdir/kde4/katectagsplugin.so
@@ -97,6 +98,9 @@ A fast and advanced text editor with nice plugins for KDE 4.
 %_kde_mandir/man1/kate.1.*
 %_kde_datadir/mime/packages/ktesnippets.xml
 %_kde_docdir/*/*/kate
+%_kde_appsdir/ktexteditor_acomment
+%_kde_datadir/config/artisticcommentrc
+%_kde_services/ktexteditor_acomment.desktop
 
 #-----------------------------------------------------------------------------
 
@@ -281,7 +285,7 @@ against kate.
 %_kde_libdir/libkateinterfaces.so
 %_kde_libdir/libkatepartinterfaces.so
 %_kde_libdir/libktexteditor_codesnippets_core.so
-
+%_kde_libdir/libacomment.a
 
 #---------------------------------------------------------------
 
