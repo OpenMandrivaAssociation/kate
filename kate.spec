@@ -31,10 +31,8 @@ A fast and advanced text editor with nice plugins for KDE 4.
 %_kde_bindir/ktesnippets_editor
 %_kde_libdir/libkdeinit4_kate.so
 %_kde_libdir/kde4/katebacktracebrowserplugin.so
-%_kde_libdir/kde4/kateexternaltoolsplugin.so
 %_kde_libdir/kde4/katefilebrowserplugin.so
 %_kde_libdir/kde4/katefiletemplates.so
-%_kde_libdir/kde4/katefindinfilesplugin.so
 %_kde_libdir/kde4/kategdbplugin.so
 %_kde_libdir/kde4/katekonsoleplugin.so
 %_kde_libdir/kde4/katemailfilesplugin.so
@@ -70,10 +68,8 @@ A fast and advanced text editor with nice plugins for KDE 4.
 %exclude %_kde_iconsdir/hicolor/scalable/apps/ktexteditorautobrace.svgz
 %_kde_iconsdir/oxygen/*/actions/*
 %_kde_services/katebacktracebrowserplugin.desktop
-%_kde_services/kateexternaltoolsplugin.desktop
 %_kde_services/katefilebrowserplugin.desktop
 %_kde_services/katefiletemplates.desktop
-%_kde_services/katefindinfilesplugin.desktop
 %_kde_services/kategdbplugin.desktop
 %_kde_services/katekonsoleplugin.desktop
 %_kde_services/katemailfilesplugin.desktop
