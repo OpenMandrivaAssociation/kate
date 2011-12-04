@@ -2,7 +2,7 @@ Name: kate
 Summary: Advanced text editor
 Version: 4.7.80
 Group: Graphical desktop/KDE
-Release: 1
+Release: 2
 Epoch: 2
 License: GPLv2 LGPLv2
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/%{name}-%{version}.tar.bz2
@@ -115,39 +115,6 @@ This package contains the Kate KPart component.
 %_kde_services/katepart.desktop
 
 #-----------------------------------------------------------------------------
-
-%package -n kate-extensions
-Summary: Kate extensions
-Group: Graphical desktop/KDE
-
-%description -n kate-extensions
-Kate extensions pacakge.
-
-%files -n kate-extensions
-%_kde_libdir/kde4/ktexteditor_autobrace.so
-%_kde_libdir/kde4/ktexteditor_exporter.so
-%_kde_libdir/kde4/ktexteditor_hlselection.so
-%_kde_libdir/kde4/ktexteditor_iconinserter.so
-%_kde_libdir/kde4/ktexteditor_insanehtml_le.so
-%_kde_libdir/kde4/ktexteditor_insertfile.so
-%_kde_libdir/kde4/ktexteditor_kdatatool.so
-%_kde_appsdir/ktexteditor_exporter
-%_kde_appsdir/ktexteditor_iconinserter
-%_kde_appsdir/ktexteditor_insanehtml_le
-%_kde_appsdir/ktexteditor_insertfile
-%_kde_appsdir/ktexteditor_kdatatool
-%_kde_services/ktexteditor_autobrace.desktop
-%_kde_services/ktexteditor_autobrace_config.desktop
-%_kde_services/ktexteditor_exporter.desktop
-%_kde_services/ktexteditor_hlselection.desktop
-%_kde_services/ktexteditor_iconinserter.desktop
-%_kde_services/ktexteditor_insanehtml_le.desktop
-%_kde_services/ktexteditor_insertfile.desktop
-%_kde_services/ktexteditor_kdatatool.desktop
-%_kde_iconsdir/hicolor/scalable/apps/ktexteditorautobrace.svgz
-
-#-----------------------------------------------------------------------------
-
 %package -n kwrite
 Summary: Simple text editor for KDE 4
 Group: Graphical desktop/KDE
@@ -176,6 +143,7 @@ Features :
 %package -n ktexteditor
 Summary: Ktexteditor
 Group: Graphical desktop/KDE
+%rename kate-extensions
 
 %description -n ktexteditor
 Ktexteditor package
@@ -189,12 +157,11 @@ Ktexteditor package
 %_kde_libdir/kde4/ktexteditor_insertfile.so
 %_kde_libdir/kde4/ktexteditor_kdatatool.so
 %_kde_libdir/kde4/ktexteditor_python-encoding.so
-%_kde_appsdir/ktexteditor_exporter/ktexteditor_exporterui.rc
-%_kde_appsdir/ktexteditor_iconinserter/ktexteditor_iconinserterui.rc
-%_kde_appsdir/ktexteditor_insanehtml_le/insanehtml_le_ui.rc
-%_kde_appsdir/ktexteditor_insanehtml_le/xhtml.cfg
-%_kde_appsdir/ktexteditor_insertfile/ktexteditor_insertfileui.rc
-%_kde_appsdir/ktexteditor_kdatatool/ktexteditor_kdatatoolui.rc
+%_kde_appsdir/ktexteditor_exporter
+%_kde_appsdir/ktexteditor_iconinserter
+%_kde_appsdir/ktexteditor_insanehtml_le
+%_kde_appsdir/ktexteditor_insertfile
+%_kde_appsdir/ktexteditor_kdatatool
 %_kde_services/ktexteditor_autobrace.desktop
 %_kde_services/ktexteditor_autobrace_config.desktop
 %_kde_services/ktexteditor_exporter.desktop
