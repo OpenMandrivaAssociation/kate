@@ -1,8 +1,8 @@
 Name: kate
 Summary: Advanced text editor
-Version: 4.7.80
+Version: 4.7.90
 Group: Graphical desktop/KDE
-Release: 2
+Release: 1
 Epoch: 2
 License: GPLv2 LGPLv2
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/%{name}-%{version}.tar.bz2
