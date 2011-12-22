@@ -1,6 +1,6 @@
 Name: kate
 Summary: Advanced text editor
-Version: 4.7.90
+Version: 4.7.95
 Group: Graphical desktop/KDE
 Release: 1
 Epoch: 2
