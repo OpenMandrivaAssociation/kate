@@ -42,7 +42,6 @@ A fast and advanced text editor with nice plugins for KDE 4.
 %_kde_libdir/kde4/katesymbolviewerplugin.so
 %_kde_libdir/kde4/katetabbarextensionplugin.so
 %_kde_libdir/kde4/katetextfilterplugin.so
-%_kde_libdir/kde4/ktexteditor_python-encoding.so
 %_kde_libdir/kde4/ktexteditor_acomment.so
 %_kde_libdir/kde4/plasma_applet_katesession.so
 %_kde_libdir/kde4/katebuildplugin.so
@@ -54,7 +53,6 @@ A fast and advanced text editor with nice plugins for KDE 4.
 %_kde_libdir/kde4/katexmltoolsplugin.so
 %_kde_libdir/kde4/katefiletreeplugin.so
 %_kde_libdir/kde4/katesqlplugin.so
-%_kde_libdir/kde4/ktexteditor_python-encoding.so
 %_kde_configdir/ktexteditor_codesnippets_core.knsrc
 %_kde_applicationsdir/kate.desktop
 %_kde_applicationsdir/ktesnippets_editor.desktop
@@ -85,13 +83,11 @@ A fast and advanced text editor with nice plugins for KDE 4.
 %_kde_services/katectagsplugin.desktop
 %_kde_services/kate_kttsd.desktop
 %_kde_services/katexmlcheck.desktop
-%_kde_services/ktexteditor_python-encoding.desktop
 %_kde_services/katesnippets_tngplugin.desktop
 %_kde_services/katetabifyplugin.desktop
 %_kde_services/katexmltools.desktop
 %_kde_services/katesql.desktop
 %_kde_services/katefiletreeplugin.desktop
-%_kde_services/ktexteditor_python-encoding.desktop
 %_kde_servicetypes/kateplugin.desktop
 %_kde_mandir/man1/kate.1.*
 %_kde_datadir/mime/packages/ktesnippets.xml
