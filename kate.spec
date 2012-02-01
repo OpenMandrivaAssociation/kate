@@ -5,7 +5,8 @@ Group: Graphical desktop/KDE
 Release: 1
 Epoch: 2
 License: GPLv2 LGPLv2
-Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/%{name}-%{version}.tar.bz2
+Source0: ftp://ftp.kde.org/pub/kde/stable/%version/src/%{name}-%{version}.tar.bz2
+Source1: %{name}.rpmlintrc
 
 BuildRequires: kdelibs4-devel >= 2:%version
 BuildRequires: hunspell-devel
