@@ -2,7 +2,7 @@ Name: kate
 Summary: Advanced text editor
 Version: 4.8.2
 Group: Graphical desktop/KDE
-Release: 1
+Release: 2
 Epoch: 3
 License: GPLv2 LGPLv2
 Source0: ftp://ftp.kde.org/pub/kde/stable/%version/src/%{name}-%{version}.tar.xz
@@ -228,7 +228,7 @@ Requires: pkgconfig(libxslt)
 Requires: subversion-devel
 Requires: binutils-devel
 Requires: boost-devel
-Requires: libltdl-devel
+Requires: libtool-devel
 Requires: antlr-tool
 Requires: antlr-C++
 Requires: %libkateinterfaces = %epoch:%version
