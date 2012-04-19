@@ -14,7 +14,7 @@ BuildRequires: libxslt-devel
 BuildRequires: subversion-devel
 BuildRequires: binutils-devel
 BuildRequires: boost-devel
-BuildRequires: libltdl-devel
+BuildRequires: libtool-devel
 
 Requires: konsole >= 1:%version
 Requires: katepart = %epoch:%version-%release
