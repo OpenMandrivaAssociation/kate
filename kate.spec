@@ -243,7 +243,6 @@ against kate.
 %_kde_libdir/libkateinterfaces.so
 %_kde_libdir/libkatepartinterfaces.so
 %_kde_libdir/libktexteditor_codesnippets_core.so
-%_kde_libdir/libacomment.a
 
 #---------------------------------------------------------------
 
