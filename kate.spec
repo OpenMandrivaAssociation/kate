@@ -222,7 +222,7 @@ Requires:	pkgconfig(libxslt)
 Requires:	subversion-devel
 Requires:	binutils-devel
 Requires:	boost-devel
-Requires:	libltdl-devel
+Requires:	libtool-devel
 Requires:	antlr-tool
 Requires:	antlr-C++
 Requires:	%{libkateinterfaces} = %{EVRD}
