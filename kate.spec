@@ -13,7 +13,7 @@ BuildRequires:	pkgconfig(libxslt)
 BuildRequires:	subversion-devel
 BuildRequires:	binutils-devel
 BuildRequires:	boost-devel
-BuildRequires:	libltdl-devel
+BuildRequires:	libtool-devel
 Requires:	konsole >= 1:%{version}
 Requires:	katepart = %{EVRD}
 Requires:	kate-extensions = %{EVRD}
