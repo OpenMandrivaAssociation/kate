@@ -1,10 +1,11 @@
 Name:		kate
 Summary:	Advanced text editor
-Version: 4.9.3
+Version:	4.9.4
 Group:		Graphical desktop/KDE
-Release: 1
+Release:	1
 Epoch:		3
 License:	GPLv2 LGPLv2
+URL:		http://kate-editor.org/
 Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 Source1:	%{name}.rpmlintrc
 BuildRequires:	kdelibs4-devel
@@ -13,7 +14,7 @@ BuildRequires:	pkgconfig(libxslt)
 BuildRequires:	subversion-devel
 BuildRequires:	binutils-devel
 BuildRequires:	boost-devel
-BuildRequires:	libtool-devel
+BuildRequires:	libltdl-devel
 Requires:	konsole >= 1:%{version}
 Requires:	katepart = %{EVRD}
 Requires:	kate-extensions = %{EVRD}
@@ -222,7 +223,7 @@ Requires:	pkgconfig(libxslt)
 Requires:	subversion-devel
 Requires:	binutils-devel
 Requires:	boost-devel
-Requires:	libtool-devel
+Requires:	libltdl-devel
 Requires:	antlr-tool
 Requires:	antlr-C++
 Requires:	%{libkateinterfaces} = %{EVRD}
@@ -252,4 +253,89 @@ against kate.
 
 %install
 %makeinstall_std -C build
+
+%changelog
+* Wed Dec 05 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.9.4-1
+- New version 4.9.4
+
+* Wed Nov 07 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.9.3-1
+- New version 4.9.3
+
+* Thu Oct 04 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.9.2-1
+- New version 4.9.2
+
+* Sat Sep 08 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.9.1-1
+- New version 4.9.1
+
+* Tue Aug 14 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.9.0-1
+- New version 4.9.0
+- Add URL
+
+* Fri Jul 20 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.8.97-1
+- New version 4.8.97
+
+* Tue Jul 03 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.8.95-1
+- New version 4.8.95
+- Artistic Comment extension is removed in upstream, fix file list
+
+* Fri Jun 08 2012 Andrey Bondrov <bondrov@math.dvgu.ru> 3:4.8.4-69.1mib2010.2
+- New version 4.8.4
+- MIB (Mandriva International Backports)
+
+* Fri May 04 2012 Andrey Bondrov <bondrov@math.dvgu.ru> 3:4.8.3-69.1mib2010.2
+- New version 4.8.3
+- MIB (Mandriva International Backports)
+
+* Wed Apr 04 2012 Andrey Bondrov <bondrov@math.dvgu.ru> 3:4.8.2-69.1mib2010.2
+- New version 4.8.2
+- MIB (Mandriva International Backports)
+
+* Wed Mar 07 2012 Andrey Bondrov <bondrov@math.dvgu.ru> 3:4.8.1-69.1mib2010.2
+- New version 4.8.1
+- Add Obsoletes for libktexteditor_codesnippets_core0
+- MIB (Mandriva International Backports)
+
+* Mon Feb 20 2012 Andrey Bondrov <bondrov@math.dvgu.ru> 3:4.8.0-69.2mib2010.2
++ Revision: 770515
+- Backport to 2010.2 for MIB users
+- MIB (Mandriva International Backports)
+
+* Wed Feb 01 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 3:4.8.0-2
++ Revision: 770515
+- add required epoch to satisfy dependencies
+- add rpmlintrc config to filter out some errors
+
+* Thu Jan 19 2012 Nicolas Lécureuil <nlecureuil@mandriva.com> 2:4.8.0-1
++ Revision: 762451
+- New upstream tarball
+
+* Fri Jan 06 2012 Nicolas Lécureuil <nlecureuil@mandriva.com> 2:4.7.97-1
++ Revision: 758043
+- New upstream tarball
+
+* Tue Jan 03 2012 Nicolas Lécureuil <nlecureuil@mandriva.com> 2:4.7.95-1
++ Revision: 748825
+- Fix file list
+- Fix file list
+- New upstream tarball
+
+* Fri Dec 09 2011 Nicolas Lécureuil <nlecureuil@mandriva.com> 2:4.7.90-1
++ Revision: 739354
+- New upstream tarball
+
+* Sun Dec 04 2011 Nicolas Lécureuil <nlecureuil@mandriva.com> 2:4.7.80-2
++ Revision: 737681
+- Remove kate-extensions which is exactly the same as ktexteditor ( thanks to Per Oyvind )
+
+* Sat Dec 03 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 2:4.7.80-1
++ Revision: 737547
+- drop no longer provided files from %%files
+
+  + Nicolas Lécureuil <nlecureuil@mandriva.com>
+    - New upstream tarball 4.7.80
+
+* Sat Sep 10 2011 Nicolas Lécureuil <nlecureuil@mandriva.com> 2:4.7.41-1
++ Revision: 699184
+- Fix file list
+- imported package kate
 
