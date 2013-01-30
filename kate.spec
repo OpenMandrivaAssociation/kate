@@ -21,6 +21,9 @@ BuildRequires:	subversion-devel
 BuildRequires:	binutils-devel
 BuildRequires:	boost-devel
 BuildRequires:	libltdl-devel
+BuildRequires:	python-devel python-sip python-qt4 python-kde4
+BuildRequires:	pkgconfig(QJson)
+BuildRequires:	pkgconfig(libkactivities) >= 6.1.0
 Requires:	konsole >= 1:%{version}
 Requires:	katepart = %{EVRD}
 Requires:	kate-extensions = %{EVRD}
