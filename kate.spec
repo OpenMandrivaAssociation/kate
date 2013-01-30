@@ -1,12 +1,18 @@
 Name:		kate
 Summary:	Advanced text editor
-Version:	4.9.4
+Version:	4.9.98
 Group:		Graphical desktop/KDE
 Release:	1
 Epoch:		3
 License:	GPLv2 LGPLv2
 URL:		http://kate-editor.org/
-Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
+%define is_beta %(if test `echo %version |cut -d. -f3` -ge 70; then echo -n 1; else echo -n 0; fi)
+%if %is_beta
+%define ftpdir unstable
+%else
+%define ftpdir stable
+%endif
+Source0:	ftp://ftp.kde.org/pub/kde/%ftpdir/%{version}/src/%{name}-%{version}.tar.xz
 Source1:	%{name}.rpmlintrc
 BuildRequires:	kdelibs4-devel
 BuildRequires:	pkgconfig(hunspell)
@@ -19,6 +25,9 @@ Requires:	konsole >= 1:%{version}
 Requires:	katepart = %{EVRD}
 Requires:	kate-extensions = %{EVRD}
 Conflicts:	kdelibs4-core < 2:4.6.90
+%define libktexteditor_codesnippets %mklibname ktexteditor-codesnippets 0
+Obsoletes: %libktexteditor_codesnippets < %EVRD
+
 
 %description
 A fast and advanced text editor with nice plugins for KDE 4.
@@ -26,7 +35,6 @@ A fast and advanced text editor with nice plugins for KDE 4.
 %files
 %doc kate/COPYING.LIB kate/AUTHORS
 %{_kde_bindir}/kate
-%{_kde_bindir}/ktesnippets_editor
 %{_kde_libdir}/libkdeinit4_kate.so
 %{_kde_libdir}/kde4/katebacktracebrowserplugin.so
 %{_kde_libdir}/kde4/katefilebrowserplugin.so
@@ -35,7 +43,6 @@ A fast and advanced text editor with nice plugins for KDE 4.
 %{_kde_libdir}/kde4/katekonsoleplugin.so
 %{_kde_libdir}/kde4/katemailfilesplugin.so
 %{_kde_libdir}/kde4/kateopenheaderplugin.so
-%{_kde_libdir}/kde4/katequickdocumentswitcherplugin.so
 %{_kde_libdir}/kde4/katesearchplugin.so
 %{_kde_libdir}/kde4/katesymbolviewerplugin.so
 %{_kde_libdir}/kde4/katetabbarextensionplugin.so
@@ -45,21 +52,21 @@ A fast and advanced text editor with nice plugins for KDE 4.
 %{_kde_libdir}/kde4/katectagsplugin.so
 %{_kde_libdir}/kde4/kate_kttsd.so
 %{_kde_libdir}/kde4/katexmlcheckplugin.so
-%{_kde_libdir}/kde4/katesnippets_tngplugin.so
 %{_kde_libdir}/kde4/katetabifyplugin.so
 %{_kde_libdir}/kde4/katexmltoolsplugin.so
 %{_kde_libdir}/kde4/katefiletreeplugin.so
 %{_kde_libdir}/kde4/katesqlplugin.so
-%{_kde_configdir}/ktexteditor_codesnippets_core.knsrc
+%{_kde_libdir}/kde4/kateprojectplugin.so
+%{_kde_libdir}/kde4/katesnippetsplugin.so
+%{_kde_libdir}/kde4/pateplugin.so
 %{_kde_applicationsdir}/kate.desktop
-%{_kde_applicationsdir}/ktesnippets_editor.desktop
 %{_kde_appsdir}/kate
 %{_kde_appsdir}/katexmltools
 %{_kde_appsdir}/kconf_update/kate-2.4.upd
-%{_kde_appsdir}/ktexteditor_snippets
-%{_kde_configdir}/katefiletemplates.knsrc
 %{_kde_configdir}/katemoderc
 %{_kde_configdir}/katerc
+%{_kde_configdir}/kateschemarc
+%{_kde_configdir}/katesyntaxhighlightingrc
 %{_kde_iconsdir}/hicolor/*/apps/*.*
 %exclude %{_kde_iconsdir}/hicolor/scalable/apps/ktexteditorautobrace.svgz
 %{_kde_iconsdir}/oxygen/*/actions/*
@@ -70,7 +77,6 @@ A fast and advanced text editor with nice plugins for KDE 4.
 %{_kde_services}/katekonsoleplugin.desktop
 %{_kde_services}/katemailfilesplugin.desktop
 %{_kde_services}/kateopenheader.desktop
-%{_kde_services}/katequickdocumentswitcher.desktop
 %{_kde_services}/katesearch.desktop
 %{_kde_services}/katesymbolviewer.desktop
 %{_kde_services}/katetabbarextension.desktop
@@ -80,15 +86,27 @@ A fast and advanced text editor with nice plugins for KDE 4.
 %{_kde_services}/katectagsplugin.desktop
 %{_kde_services}/kate_kttsd.desktop
 %{_kde_services}/katexmlcheck.desktop
-%{_kde_services}/katesnippets_tngplugin.desktop
 %{_kde_services}/katetabifyplugin.desktop
 %{_kde_services}/katexmltools.desktop
 %{_kde_services}/katesql.desktop
 %{_kde_services}/katefiletreeplugin.desktop
+%{_kde_services}/kateprojectplugin.desktop
+%{_kde_services}/katesnippetsplugin.desktop
+%{_kde_services}/pate.desktop
 %{_kde_servicetypes}/kateplugin.desktop
 %{_kde_mandir}/man1/kate.1.*
-%{_kde_datadir}/mime/packages/ktesnippets.xml
 %{_kde_docdir}/*/*/kate
+
+%package -n python-kate
+Summary:	Python interface to the Kate text editor
+Group:		Graphical desktop/KDE
+Requires:	%name = %EVRD
+
+%description -n python-kate
+Python interface to the Kate text editor
+
+%files -n python-kate
+%_libdir/python*/site-packages/PyKate4
 
 #-----------------------------------------------------------------------------
 
@@ -103,7 +121,6 @@ This package contains the Kate KPart component.
 %files -n katepart
 %{_kde_libdir}/kde4/katepart.so
 %{_kde_appsdir}/katepart
-%{_kde_configdir}/katepartpluginsrc
 %{_kde_services}/katepart.desktop
 
 #-----------------------------------------------------------------------------
@@ -146,24 +163,16 @@ Ktexteditor package
 %{_kde_libdir}/kde4/ktexteditor_exporter.so
 %{_kde_libdir}/kde4/ktexteditor_hlselection.so
 %{_kde_libdir}/kde4/ktexteditor_iconinserter.so
-%{_kde_libdir}/kde4/ktexteditor_insanehtml_le.so
 %{_kde_libdir}/kde4/ktexteditor_insertfile.so
-%{_kde_libdir}/kde4/ktexteditor_kdatatool.so
-%{_kde_libdir}/kde4/ktexteditor_python-encoding.so
 %{_kde_appsdir}/ktexteditor_exporter
 %{_kde_appsdir}/ktexteditor_iconinserter
-%{_kde_appsdir}/ktexteditor_insanehtml_le
 %{_kde_appsdir}/ktexteditor_insertfile
-%{_kde_appsdir}/ktexteditor_kdatatool
 %{_kde_services}/ktexteditor_autobrace.desktop
 %{_kde_services}/ktexteditor_autobrace_config.desktop
 %{_kde_services}/ktexteditor_exporter.desktop
 %{_kde_services}/ktexteditor_hlselection.desktop
 %{_kde_services}/ktexteditor_iconinserter.desktop
-%{_kde_services}/ktexteditor_insanehtml_le.desktop
 %{_kde_services}/ktexteditor_insertfile.desktop
-%{_kde_services}/ktexteditor_kdatatool.desktop
-%{_kde_services}/ktexteditor_python-encoding.desktop
 %{_kde_iconsdir}/hicolor/scalable/apps/ktexteditorautobrace.svgz
 
 #------------------------------------------------------------------------------
@@ -196,24 +205,6 @@ Runtime library for Kate.
 %files -n %{libkatepartinterfaces}
 %{_kde_libdir}/libkatepartinterfaces.so.%{libkatepartinterfaces_major}*
 
-#--------------------------------------------------------------------------------
-
-%define ktexteditor_codesnipets_major 0
-%define libktexteditor_codesnipets %mklibname ktexteditor-codesnippets %{ktexteditor_codesnipets_major}
-
-%package -n %{libktexteditor_codesnipets}
-Summary:	Ktexteditory Library
-Group:		System/Libraries
-Obsoletes:	%{_lib}ktexteditor_codesnippets_core0 < %{EVRD}
-
-%description -n %{libktexteditor_codesnipets}
-Ktexteditory codesnipets library.
-
-%files -n %{libktexteditor_codesnipets}
-%{_kde_libdir}/libktexteditor_codesnippets_core.so.%{ktexteditor_codesnipets_major}*
-
-#---------------------------------------------------------------------
-
 %package devel
 Summary:	Header files for kate
 Group:		Development/KDE and Qt
@@ -227,7 +218,6 @@ Requires:	libltdl-devel
 Requires:	antlr-tool
 Requires:	antlr-C++
 Requires:	%{libkateinterfaces} = %{EVRD}
-Requires:	%{libktexteditor_codesnipets} = %{EVRD}
 Requires:	%{libkatepartinterfaces} = %{EVRD}
 Conflicts:	kdesdk4-devel < 1:4.6.90
 Conflicts:	kdelibs4-devel < 2:4.6.90
@@ -240,7 +230,6 @@ against kate.
 %{_kde_includedir}/*
 %{_kde_libdir}/libkateinterfaces.so
 %{_kde_libdir}/libkatepartinterfaces.so
-%{_kde_libdir}/libktexteditor_codesnippets_core.so
 
 #---------------------------------------------------------------
 

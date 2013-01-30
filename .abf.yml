@@ -1,3 +1,4 @@
----
-sources:
+removed_sources:
   kate-4.9.4.tar.xz: 7740527d43f057c949c4954d916cd7237c915b20
+sources:
+  kate-4.9.98.tar.xz: 906280b4c88bcd6ee97c95a5cf457f0edaf4f4f9
