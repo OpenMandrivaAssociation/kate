@@ -21,7 +21,7 @@ BuildRequires:	subversion-devel
 BuildRequires:	binutils-devel
 BuildRequires:	boost-devel
 BuildRequires:	libltdl-devel
-BuildRequires:	python-devel python-sip python-qt4 python-kde4
+BuildRequires:	python-devel python-sip python-qt4 python-kde4 python-kde4-devel
 BuildRequires:	pkgconfig(QJson)
 BuildRequires:	pkgconfig(libkactivities) >= 6.1.0
 Requires:	konsole >= 1:%{version}
