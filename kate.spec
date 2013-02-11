@@ -1,18 +1,18 @@
 Name:		kate
 Summary:	Advanced text editor
-Version:	4.9.98
+Version:	4.10.0
 Group:		Graphical desktop/KDE
 Release:	1
 Epoch:		3
 License:	GPLv2 LGPLv2
 URL:		http://kate-editor.org/
 %define is_beta %(if test `echo %version |cut -d. -f3` -ge 70; then echo -n 1; else echo -n 0; fi)
-%if %is_beta
+%if %{is_beta}
 %define ftpdir unstable
 %else
 %define ftpdir stable
 %endif
-Source0:	ftp://ftp.kde.org/pub/kde/%ftpdir/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	ftp://ftp.kde.org/pub/kde/%{ftpdir}/%{version}/src/%{name}-%{version}.tar.xz
 Source1:	%{name}.rpmlintrc
 BuildRequires:	kdelibs4-devel
 BuildRequires:	pkgconfig(hunspell)
@@ -28,9 +28,7 @@ Requires:	konsole >= 1:%{version}
 Requires:	katepart = %{EVRD}
 Requires:	kate-extensions = %{EVRD}
 Conflicts:	kdelibs4-core < 2:4.6.90
-%define libktexteditor_codesnippets %mklibname ktexteditor-codesnippets 0
-Obsoletes: %libktexteditor_codesnippets < %EVRD
-
+Obsoletes:	%{_lib}ktexteditor_codesnippets0 < 3:4.10.0
 
 %description
 A fast and advanced text editor with nice plugins for KDE 4.
@@ -103,13 +101,13 @@ A fast and advanced text editor with nice plugins for KDE 4.
 %package -n python-kate
 Summary:	Python interface to the Kate text editor
 Group:		Graphical desktop/KDE
-Requires:	%name = %EVRD
+Requires:	%{name} = %{EVRD}
 
 %description -n python-kate
-Python interface to the Kate text editor
+Python interface to the Kate text editor.
 
 %files -n python-kate
-%_libdir/python*/site-packages/PyKate4
+%{py_platsitedir}/PyKate4
 
 #-----------------------------------------------------------------------------
 
@@ -159,7 +157,7 @@ Obsoletes:	kate-extensions < %{EVRD}
 Provides:	kate-extensions = %{EVRD}
 
 %description -n ktexteditor
-Ktexteditor package
+Ktexteditor package.
 
 %files -n ktexteditor
 %{_kde_libdir}/kde4/ktexteditor_autobrace.so
@@ -247,6 +245,12 @@ against kate.
 %makeinstall_std -C build
 
 %changelog
+* Thu Feb 07 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.10.0-1
+- New version 4.10.0
+- New subpackage python-kate
+- Drop ktexteditor_codesnippets library
+- Update files
+
 * Wed Dec 05 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.9.4-1
 - New version 4.9.4
 
