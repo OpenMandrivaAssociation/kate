@@ -1,12 +1,12 @@
-Name:		kate
 Summary:	Advanced text editor
+Name:		kate
 Version:	4.10.2
-Group:		Graphical desktop/KDE
-Release:	1
+Release:	2
 Epoch:		3
+Group:		Graphical desktop/KDE
 License:	GPLv2 LGPLv2
 URL:		http://kate-editor.org/
-%define is_beta %(if test `echo %version |cut -d. -f3` -ge 70; then echo -n 1; else echo -n 0; fi)
+%define is_beta %(if test `echo %{version} |cut -d. -f3` -ge 70; then echo -n 1; else echo -n 0; fi)
 %if %{is_beta}
 %define ftpdir unstable
 %else
@@ -28,7 +28,7 @@ Requires:	konsole >= 1:%{version}
 Requires:	katepart = %{EVRD}
 Requires:	kate-extensions = %{EVRD}
 Conflicts:	kdelibs4-core < 2:4.6.90
-Obsoletes:	%{_lib}ktexteditor_codesnippets0 < 3:4.10.0
+Obsoletes:	%{_lib}ktexteditor-codesnippets0 < 3:4.10.0
 
 %description
 A fast and advanced text editor with nice plugins for KDE 4.
