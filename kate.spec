@@ -68,6 +68,7 @@ A fast and advanced text editor with nice plugins for KDE 4.
 %{_kde_configdir}/katerc
 %{_kde_configdir}/kateschemarc
 %{_kde_configdir}/katesyntaxhighlightingrc
+%{_kde_configdir}/ktexteditor_codesnippets_core.knsrc
 %{_kde_iconsdir}/hicolor/*/apps/*.*
 %exclude %{_kde_iconsdir}/hicolor/scalable/apps/ktexteditorautobrace.svgz
 %{_kde_iconsdir}/oxygen/*/actions/*
@@ -247,6 +248,7 @@ against kate.
 %changelog
 * Tue May 07 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.10.3-1
 - New version 4.10.3
+- Update files
 
 * Wed Apr 03 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.10.2-1
 - New version 4.10.2
