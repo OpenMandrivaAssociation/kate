@@ -1,7 +1,7 @@
 Summary:	Advanced text editor
 Name:		kate
 Version:	4.10.5
-Release:	1
+Release:	2
 Epoch:		3
 Group:		Graphical desktop/KDE
 License:	GPLv2 LGPLv2
@@ -64,11 +64,6 @@ A fast and advanced text editor with nice plugins for KDE 4.
 %{_kde_appsdir}/kate
 %{_kde_appsdir}/katexmltools
 %{_kde_appsdir}/kconf_update/kate-2.4.upd
-%{_kde_configdir}/katemoderc
-%{_kde_configdir}/katerc
-%{_kde_configdir}/kateschemarc
-%{_kde_configdir}/katesyntaxhighlightingrc
-%{_kde_configdir}/ktexteditor_codesnippets_core.knsrc
 %{_kde_iconsdir}/hicolor/*/apps/*.*
 %exclude %{_kde_iconsdir}/hicolor/scalable/apps/ktexteditorautobrace.svgz
 %{_kde_iconsdir}/oxygen/*/actions/*
@@ -123,6 +118,11 @@ This package contains the Kate KPart component.
 %files -n katepart
 %{_kde_libdir}/kde4/katepart.so
 %{_kde_appsdir}/katepart
+%{_kde_configdir}/katemoderc
+%{_kde_configdir}/katerc
+%{_kde_configdir}/kateschemarc
+%{_kde_configdir}/katesyntaxhighlightingrc
+%{_kde_configdir}/ktexteditor_codesnippets_core.knsrc
 %{_kde_services}/katepart.desktop
 
 #-----------------------------------------------------------------------------
