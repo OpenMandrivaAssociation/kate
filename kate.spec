@@ -1,7 +1,7 @@
 Summary:	Advanced text editor
 Name:		kate
-Version:	4.10.5
-Release:	3
+Version:	4.11.0
+Release:	1
 Epoch:		3
 Group:		Graphical desktop/KDE
 License:	GPLv2 LGPLv2
@@ -247,6 +247,9 @@ against kate.
 %makeinstall_std -C build
 
 %changelog
+* Wed Aug 14 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.11.0-1
+- New version 4.11.0
+
 * Wed Aug 14 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.10.5-3
 - Add Conflicts to avoid file conflicts for sure
 
