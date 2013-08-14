@@ -1,7 +1,7 @@
 Summary:	Advanced text editor
 Name:		kate
 Version:	4.10.5
-Release:	2
+Release:	3
 Epoch:		3
 Group:		Graphical desktop/KDE
 License:	GPLv2 LGPLv2
@@ -111,6 +111,7 @@ Python interface to the Kate text editor.
 Summary:	Kate KPart
 Group:		Graphical desktop/KDE
 Conflicts:	kdelibs4-core < 2:4.6.90
+Conflicts:	kate < 3:4.10.5-2
 
 %description -n katepart
 This package contains the Kate KPart component.
@@ -246,6 +247,12 @@ against kate.
 %makeinstall_std -C build
 
 %changelog
+* Wed Aug 14 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.10.5-3
+- Add Conflicts to avoid file conflicts for sure
+
+* Mon Jul 29 2013 Crispin Boylan <crisb@mandriva.org> 3:4.10.5-2
+- Move some files into katepart which allows kwrite to work without kate
+
 * Wed Jul 03 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.10.5-1
 - New version 4.10.5
 
