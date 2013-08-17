@@ -34,7 +34,7 @@ Obsoletes:	%{_lib}ktexteditor-codesnippets0 < 3:4.10.0
 A fast and advanced text editor with nice plugins for KDE 4.
 
 %files
-%doc kate/COPYING.LIB kate/AUTHORS
+%doc COPYING.LIB AUTHORS README
 %{_kde_bindir}/kate
 %{_kde_libdir}/libkdeinit4_kate.so
 %{_kde_libdir}/kde4/katebacktracebrowserplugin.so
