@@ -55,18 +55,19 @@ A fast and advanced text editor with nice plugins for KDE 4.
 %{_kde_libdir}/kde4/katexmlcheckplugin.so
 %{_kde_libdir}/kde4/katetabifyplugin.so
 %{_kde_libdir}/kde4/katexmltoolsplugin.so
+%{_kde_libdir}/kde4/katecloseexceptplugin.so
 %{_kde_libdir}/kde4/katefiletreeplugin.so
 %{_kde_libdir}/kde4/katesqlplugin.so
+%{_kde_libdir}/kde4/katepateplugin.so
 %{_kde_libdir}/kde4/kateprojectplugin.so
 %{_kde_libdir}/kde4/katesnippetsplugin.so
-%{_kde_libdir}/kde4/pateplugin.so
 %{_kde_applicationsdir}/kate.desktop
 %{_kde_appsdir}/kate
 %{_kde_appsdir}/katexmltools
 %{_kde_appsdir}/kconf_update/kate-2.4.upd
 %{_kde_iconsdir}/hicolor/*/apps/*.*
+%{_kde_iconsdir}/hicolor/*/actions/debug-kategdb.*
 %exclude %{_kde_iconsdir}/hicolor/scalable/apps/ktexteditorautobrace.svgz
-%{_kde_iconsdir}/oxygen/*/actions/*
 %{_kde_services}/katebacktracebrowserplugin.desktop
 %{_kde_services}/katefilebrowserplugin.desktop
 %{_kde_services}/katefiletemplates.desktop
@@ -86,6 +87,7 @@ A fast and advanced text editor with nice plugins for KDE 4.
 %{_kde_services}/katetabifyplugin.desktop
 %{_kde_services}/katexmltools.desktop
 %{_kde_services}/katesql.desktop
+%{_kde_services}/katecloseexceptplugin.desktop
 %{_kde_services}/katefiletreeplugin.desktop
 %{_kde_services}/kateprojectplugin.desktop
 %{_kde_services}/katesnippetsplugin.desktop
@@ -249,6 +251,7 @@ against kate.
 %changelog
 * Wed Aug 14 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.11.0-1
 - New version 4.11.0
+- Update files list
 
 * Wed Aug 14 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.10.5-3
 - Add Conflicts to avoid file conflicts for sure
