@@ -96,6 +96,8 @@ A fast and advanced text editor with nice plugins for KDE 4.
 %{_kde_mandir}/man1/kate.1.*
 %{_kde_docdir}/*/*/kate
 
+#-----------------------------------------------------------------------------
+
 %package -n python-kate
 Summary:	Python interface to the Kate text editor
 Group:		Graphical desktop/KDE
@@ -129,6 +131,7 @@ This package contains the Kate KPart component.
 %{_kde_services}/katepart.desktop
 
 #-----------------------------------------------------------------------------
+
 %package -n kwrite
 Summary:	Simple text editor for KDE 4
 Group:		Graphical desktop/KDE
@@ -209,6 +212,8 @@ Runtime library for Kate.
 
 %files -n %{libkatepartinterfaces}
 %{_kde_libdir}/libkatepartinterfaces.so.%{libkatepartinterfaces_major}*
+
+#-----------------------------------------------------------------------------
 
 %package devel
 Summary:	Header files for kate
