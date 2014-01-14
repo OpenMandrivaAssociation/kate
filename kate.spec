@@ -1,6 +1,6 @@
 Summary:	Advanced text editor
 Name:		kate
-Version:	4.11.4
+Version:	4.12.1
 Release:	1
 Epoch:		3
 Group:		Graphical desktop/KDE
@@ -254,6 +254,9 @@ against kate.
 %makeinstall_std -C build
 
 %changelog
+* Tue Jan 14 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.12.1-1
+- New version 4.12.1
+
 * Wed Dec 04 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.11.4-1
 - New version 4.11.4
 
