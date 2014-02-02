@@ -1,7 +1,7 @@
 Summary:	Advanced text editor
 Name:		kate
 Version:	4.12.1
-Release:	1
+Release:	2
 Epoch:		3
 Group:		Graphical desktop/KDE
 License:	GPLv2 LGPLv2
@@ -13,7 +13,8 @@ URL:		http://kate-editor.org/
 %define ftpdir stable
 %endif
 Source0:	ftp://ftp.kde.org/pub/kde/%{ftpdir}/%{version}/src/%{name}-%{version}.tar.xz
-Source1:	%{name}.rpmlintrc
+Source1:	kwriteroot.desktop
+Source10:	%{name}.rpmlintrc
 BuildRequires:	kdelibs4-devel
 BuildRequires:	pkgconfig(hunspell)
 BuildRequires:	pkgconfig(libxslt)
@@ -152,6 +153,7 @@ Features :
 %{_kde_bindir}/kwrite
 %{_kde_libdir}/libkdeinit4_kwrite.so
 %{_kde_applicationsdir}/kwrite.desktop
+%{_kde_applicationsdir}/kwriteroot.desktop
 %{_kde_appsdir}/kwrite
 %{_kde_docdir}/*/*/kwrite
 
@@ -253,7 +255,12 @@ against kate.
 %install
 %makeinstall_std -C build
 
+install -m 0644 %{SOURCE1} %{buildroot}%{_kde_applicationsdir}/kwriteroot.desktop
+
 %changelog
+* Sun Feb 02 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.12.1-2
+- Add kwriteroot.desktop to kwrite package
+
 * Tue Jan 14 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.12.1-1
 - New version 4.12.1
 
