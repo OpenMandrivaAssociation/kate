@@ -119,6 +119,7 @@ StartupNotify=false
 Terminal=false
 TerminalOptions=
 Type=Application
+IniitalPreference=5
 X-DBUS-ServiceName=
 X-DBUS-StartupType=
 X-DocPath=kwrite/index.html
