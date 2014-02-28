@@ -1,7 +1,7 @@
 Summary:	Advanced text editor
 Name:		kate
 Version:	4.12.2
-Release:	2
+Release:	3
 Epoch:		3
 Group:		Graphical desktop/KDE
 License:	GPLv2 LGPLv2
