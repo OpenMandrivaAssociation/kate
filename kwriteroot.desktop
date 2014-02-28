@@ -58,7 +58,6 @@ GenericName[x-test]=xxText Editorxx (root)
 GenericName[zh_CN]=文本编辑器 (root)
 GenericName[zh_TW]=文字編輯器 (root)
 Icon=accessories-text-editor
-InitialPreference=8
 MimeType=text/plain;
 Name[ru]=KWrite (root)
 Name=KWrite (root)
