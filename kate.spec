@@ -1,7 +1,7 @@
 Summary:	Advanced text editor
 Name:		kate
 Version:	4.12.2
-Release:	2
+Release:	4
 Epoch:		3
 Group:		Graphical desktop/KDE
 License:	GPLv2 LGPLv2
@@ -258,7 +258,7 @@ against kate.
 install -m 0644 %{SOURCE1} %{buildroot}%{_kde_applicationsdir}/kwriteroot.desktop
 
 %changelog
-* Sat Mar 01 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.12.2-2
+* Sat Mar 01 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.12.2-4
 - Change InitialPreference from 8 to 7 in kwriteroot.desktop
 
 * Tue Feb 04 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.12.2-1
