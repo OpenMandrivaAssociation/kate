@@ -1,6 +1,6 @@
 Summary:	Advanced text editor
 Name:		kate
-Version:	4.12.3
+Version:	4.12.4
 Release:	1
 Epoch:		3
 Group:		Graphical desktop/KDE
@@ -258,6 +258,9 @@ against kate.
 install -m 0644 %{SOURCE1} %{buildroot}%{_kde_applicationsdir}/kwriteroot.desktop
 
 %changelog
+* Wed Apr 02 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.12.4-1
+- New version 4.12.4
+
 * Tue Mar 04 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.12.3-1
 - New version 4.12.3
 
