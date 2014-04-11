@@ -1,11 +1,11 @@
 Summary:	Advanced text editor
 Name:		kate
 Version:	4.12.4
-Release:	1
+Release:	2
 Epoch:		3
+License:	GPLv2+ LGPLv2+
 Group:		Graphical desktop/KDE
-License:	GPLv2 LGPLv2
-URL:		http://kate-editor.org/
+Url:		http://kate-editor.org/
 %define is_beta %(if test `echo %{version} |cut -d. -f3` -ge 70; then echo -n 1; else echo -n 0; fi)
 %if %{is_beta}
 %define ftpdir unstable
@@ -15,16 +15,20 @@ URL:		http://kate-editor.org/
 Source0:	ftp://ftp.kde.org/pub/kde/%{ftpdir}/%{version}/src/%{name}-%{version}.tar.xz
 Source1:	kwriteroot.desktop
 Source10:	%{name}.rpmlintrc
-BuildRequires:	kdelibs4-devel
-BuildRequires:	pkgconfig(hunspell)
-BuildRequires:	pkgconfig(libxslt)
-BuildRequires:	subversion-devel
+BuildRequires:	python-sip
+BuildRequires:	python-qt4
+BuildRequires:	python-kde4
 BuildRequires:	binutils-devel
 BuildRequires:	boost-devel
+BuildRequires:	kdelibs4-devel
 BuildRequires:	libltdl-devel
-BuildRequires:	python-devel python-sip python-qt4 python-kde4 python-kde4-devel
+BuildRequires:	python-kde4-devel
+BuildRequires:	subversion-devel
+BuildRequires:	pkgconfig(hunspell)
+BuildRequires:	pkgconfig(libkactivities)
+BuildRequires:	pkgconfig(libxslt)
+BuildRequires:	pkgconfig(python)
 BuildRequires:	pkgconfig(QJson)
-BuildRequires:	pkgconfig(libkactivities) >= 6.1.0
 Requires:	konsole >= 1:%{version}
 Requires:	katepart = %{EVRD}
 Requires:	kate-extensions = %{EVRD}
@@ -258,6 +262,9 @@ against kate.
 install -m 0644 %{SOURCE1} %{buildroot}%{_kde_applicationsdir}/kwriteroot.desktop
 
 %changelog
+* Fri Apr 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.12.4-2
+- Rebuild against python-sip 4.15.5
+
 * Wed Apr 02 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.12.4-1
 - New version 4.12.4
 
