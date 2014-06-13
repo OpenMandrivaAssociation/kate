@@ -49,6 +49,7 @@ A fast and advanced text editor with nice plugins for KDE 4.
 %{_kde_libdir}/kde4/katekonsoleplugin.so
 %{_kde_libdir}/kde4/katemailfilesplugin.so
 %{_kde_libdir}/kde4/kateopenheaderplugin.so
+%{_kde_libdir}/kde4/katereplicodeplugin.so
 %{_kde_libdir}/kde4/katesearchplugin.so
 %{_kde_libdir}/kde4/katesymbolviewerplugin.so
 %{_kde_libdir}/kde4/katetabbarextensionplugin.so
@@ -94,10 +95,13 @@ A fast and advanced text editor with nice plugins for KDE 4.
 %{_kde_services}/katesql.desktop
 %{_kde_services}/katecloseexceptplugin.desktop
 %{_kde_services}/katefiletreeplugin.desktop
+%{_kde_services}/katepate_*.desktop
 %{_kde_services}/kateprojectplugin.desktop
+%{_kde_services}/katereplicodeplugin.desktop
 %{_kde_services}/katesnippetsplugin.desktop
 %{_kde_services}/pate.desktop
 %{_kde_servicetypes}/kateplugin.desktop
+%{_kde_servicetypes}/katepythonplugin.desktop
 %{_kde_mandir}/man1/kate.1.*
 %{_kde_docdir}/*/*/kate
 
@@ -178,6 +182,7 @@ Ktexteditor package.
 %{_kde_libdir}/kde4/ktexteditor_hlselection.so
 %{_kde_libdir}/kde4/ktexteditor_iconinserter.so
 %{_kde_libdir}/kde4/ktexteditor_insertfile.so
+%{_kde_libdir}/kde4/ktexteditor_lumen.so
 %{_kde_appsdir}/ktexteditor_exporter
 %{_kde_appsdir}/ktexteditor_iconinserter
 %{_kde_appsdir}/ktexteditor_insertfile
@@ -187,6 +192,7 @@ Ktexteditor package.
 %{_kde_services}/ktexteditor_hlselection.desktop
 %{_kde_services}/ktexteditor_iconinserter.desktop
 %{_kde_services}/ktexteditor_insertfile.desktop
+%{_kde_services}/ktexteditor_lumen.desktop
 %{_kde_iconsdir}/hicolor/scalable/apps/ktexteditorautobrace.svgz
 
 #------------------------------------------------------------------------------
@@ -264,6 +270,7 @@ install -m 0644 %{SOURCE1} %{buildroot}%{_kde_applicationsdir}/kwriteroot.deskto
 %changelog
 * Wed Jun 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.13.2-1
 - New version 4.13.2
+- Update files
 
 * Fri Apr 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.12.4-2
 - Rebuild against python-sip 4.15.5
