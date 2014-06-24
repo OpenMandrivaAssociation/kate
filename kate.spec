@@ -1,11 +1,11 @@
 Summary:	Advanced text editor
 Name:		kate
-Version:	4.12.4
+Version:	4.13.2
 Release:	1
 Epoch:		3
+License:	GPLv2+ LGPLv2+
 Group:		Graphical desktop/KDE
-License:	GPLv2 LGPLv2
-URL:		http://kate-editor.org/
+Url:		http://kate-editor.org/
 %define is_beta %(if test `echo %{version} |cut -d. -f3` -ge 70; then echo -n 1; else echo -n 0; fi)
 %if %{is_beta}
 %define ftpdir unstable
@@ -15,16 +15,20 @@ URL:		http://kate-editor.org/
 Source0:	ftp://ftp.kde.org/pub/kde/%{ftpdir}/%{version}/src/%{name}-%{version}.tar.xz
 Source1:	kwriteroot.desktop
 Source10:	%{name}.rpmlintrc
-BuildRequires:	kdelibs4-devel
-BuildRequires:	pkgconfig(hunspell)
-BuildRequires:	pkgconfig(libxslt)
-BuildRequires:	subversion-devel
+BuildRequires:	python-sip
+BuildRequires:	python-qt4
+BuildRequires:	python-kde4
 BuildRequires:	binutils-devel
 BuildRequires:	boost-devel
+BuildRequires:	kdelibs4-devel
 BuildRequires:	libltdl-devel
-BuildRequires:	python-devel python-sip python-qt4 python-kde4 python-kde4-devel
+BuildRequires:	python-kde4-devel
+BuildRequires:	subversion-devel
+BuildRequires:	pkgconfig(hunspell)
+BuildRequires:	pkgconfig(libkactivities)
+BuildRequires:	pkgconfig(libxslt)
+BuildRequires:	pkgconfig(python)
 BuildRequires:	pkgconfig(QJson)
-BuildRequires:	pkgconfig(libkactivities) >= 6.1.0
 Requires:	konsole >= 1:%{version}
 Requires:	katepart = %{EVRD}
 Requires:	kate-extensions = %{EVRD}
@@ -45,6 +49,7 @@ A fast and advanced text editor with nice plugins for KDE 4.
 %{_kde_libdir}/kde4/katekonsoleplugin.so
 %{_kde_libdir}/kde4/katemailfilesplugin.so
 %{_kde_libdir}/kde4/kateopenheaderplugin.so
+%{_kde_libdir}/kde4/katereplicodeplugin.so
 %{_kde_libdir}/kde4/katesearchplugin.so
 %{_kde_libdir}/kde4/katesymbolviewerplugin.so
 %{_kde_libdir}/kde4/katetabbarextensionplugin.so
@@ -90,10 +95,13 @@ A fast and advanced text editor with nice plugins for KDE 4.
 %{_kde_services}/katesql.desktop
 %{_kde_services}/katecloseexceptplugin.desktop
 %{_kde_services}/katefiletreeplugin.desktop
+%{_kde_services}/katepate_*.desktop
 %{_kde_services}/kateprojectplugin.desktop
+%{_kde_services}/katereplicodeplugin.desktop
 %{_kde_services}/katesnippetsplugin.desktop
 %{_kde_services}/pate.desktop
 %{_kde_servicetypes}/kateplugin.desktop
+%{_kde_servicetypes}/katepythonplugin.desktop
 %{_kde_mandir}/man1/kate.1.*
 %{_kde_docdir}/*/*/kate
 
@@ -174,6 +182,7 @@ Ktexteditor package.
 %{_kde_libdir}/kde4/ktexteditor_hlselection.so
 %{_kde_libdir}/kde4/ktexteditor_iconinserter.so
 %{_kde_libdir}/kde4/ktexteditor_insertfile.so
+%{_kde_libdir}/kde4/ktexteditor_lumen.so
 %{_kde_appsdir}/ktexteditor_exporter
 %{_kde_appsdir}/ktexteditor_iconinserter
 %{_kde_appsdir}/ktexteditor_insertfile
@@ -183,6 +192,7 @@ Ktexteditor package.
 %{_kde_services}/ktexteditor_hlselection.desktop
 %{_kde_services}/ktexteditor_iconinserter.desktop
 %{_kde_services}/ktexteditor_insertfile.desktop
+%{_kde_services}/ktexteditor_lumen.desktop
 %{_kde_iconsdir}/hicolor/scalable/apps/ktexteditorautobrace.svgz
 
 #------------------------------------------------------------------------------
@@ -258,6 +268,13 @@ against kate.
 install -m 0644 %{SOURCE1} %{buildroot}%{_kde_applicationsdir}/kwriteroot.desktop
 
 %changelog
+* Wed Jun 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.13.2-1
+- New version 4.13.2
+- Update files
+
+* Fri Apr 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.12.4-2
+- Rebuild against python-sip 4.15.5
+
 * Wed Apr 02 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.12.4-1
 - New version 4.12.4
 
