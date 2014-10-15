@@ -1,6 +1,6 @@
 Summary:	Advanced text editor
 Name:		kate
-Version:	4.14.1
+Version:	4.14.2
 Release:	1
 Epoch:		3
 License:	GPLv2+ LGPLv2+
@@ -268,6 +268,9 @@ against kate.
 install -m 0644 %{SOURCE1} %{buildroot}%{_kde_applicationsdir}/kwriteroot.desktop
 
 %changelog
+* Wed Oct 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.14.2-1
+- New version 4.14.2
+
 * Mon Sep 29 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.14.1-1
 - New version 4.14.1
 
