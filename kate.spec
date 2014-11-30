@@ -15,6 +15,7 @@ Url:		http://kate-editor.org/
 Source0:	ftp://ftp.kde.org/pub/kde/%{ftpdir}/%{version}/src/%{name}-%{version}.tar.xz
 Source1:	kwriteroot.desktop
 Source10:	%{name}.rpmlintrc
+Patch0:		kate-4.12.90-python_library_realpath.patch
 BuildRequires:	python-sip
 BuildRequires:	python-qt4
 BuildRequires:	python-kde4
@@ -257,6 +258,7 @@ against kate.
 
 %prep
 %setup -q
+%apply_patches
 
 %build
 %cmake_kde4
