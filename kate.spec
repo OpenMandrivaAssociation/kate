@@ -31,6 +31,7 @@ BuildRequires:	cmake(KF5Parts)
 BuildRequires:	cmake(KF5TextEditor)
 BuildRequires:	cmake(KF5WindowSystem)
 BuildRequires:	cmake(KF5XmlGui)
+BuildRequires:	cmake(KF5NewStuff)
 BuildRequires:	libltdl-devel
 BuildRequires:	pkgconfig(hunspell)
 BuildRequires:	pkgconfig(libkactivities)
@@ -50,7 +51,7 @@ BuildRequires:	cmake(KF5Service)
 BuildRequires:	cmake(KF5ItemModels)
 BuildRequires:	cmake(KF5Notifications)
 BuildRequires:	cmake(KF5ThreadWeaver)
-# Should add libgit2 once we package it
+BuildRequires:	pkgconfig(libgit2)
 # May come back once there's python-kde5
 Obsoletes:	python-kate < %{EVRD}
 # Likely gone for good
