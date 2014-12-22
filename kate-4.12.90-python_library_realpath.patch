@@ -1,0 +1,21 @@
+diff -up kate-4.12.90/addons/kate/pate/src/CMakeLists.txt.python_library_realpath kate-4.12.90/addons/kate/pate/src/CMakeLists.txt
+--- kate-4.12.90/addons/kate/pate/src/CMakeLists.txt.python_library_realpath	2014-03-18 22:20:51.136533633 -0500
++++ kate-4.12.90/addons/kate/pate/src/CMakeLists.txt	2014-03-18 22:21:59.011807751 -0500
+@@ -37,6 +37,7 @@ add_definitions(-DQT_NO_KEYWORDS)
+ 
+ kde4_add_ui_files(sources manager.ui)
+ 
++get_filename_component(PYTHON_LIBRARY_REALPATH "${PYTHON_LIBRARY}" REALPATH CACHE)
+ configure_file(config.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config.h)
+ 
+ kde4_add_plugin(katepateplugin ${sources})
+diff -up kate-4.12.90/addons/kate/pate/src/config.h.cmake.python_library_realpath kate-4.12.90/addons/kate/pate/src/config.h.cmake
+--- kate-4.12.90/addons/kate/pate/src/config.h.cmake.python_library_realpath	2014-03-09 23:43:10.000000000 -0500
++++ kate-4.12.90/addons/kate/pate/src/config.h.cmake	2014-03-18 22:20:51.136533633 -0500
+@@ -17,5 +17,5 @@
+ // the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+ // Boston, MA 02110-1301, USA.
+ 
+-#define PATE_PYTHON_LIBRARY "${PYTHON_LIBRARY}"
++#define PATE_PYTHON_LIBRARY "${PYTHON_LIBRARY_REALPATH}"
+ #define PATE_PYTHON_SITE_PACKAGES_INSTALL_DIR "${PYTHON_SITE_PACKAGES_INSTALL_DIR}"
