@@ -1,7 +1,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Summary:	Advanced text editor
 Name:		kate
-Version:	14.12.0
+Version:	14.12.3
 Release:	1
 Epoch:		3
 License:	GPLv2+ LGPLv2+
