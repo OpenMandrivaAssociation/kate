@@ -13,7 +13,7 @@ Source10:	%{name}.rpmlintrc
 Patch0:		kate-4.12.90-python_library_realpath.patch
 BuildRequires:	binutils-devel
 BuildRequires:	boost-devel
-BuildRequires:	extra-cmake-modules5
+BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt5Core)
 BuildRequires:	cmake(Qt5DBus)
 BuildRequires:	cmake(Qt5Widgets)
@@ -72,6 +72,7 @@ A fast and advanced text editor with nice plugins for KDE 5.
 %{_datadir}/icons/hicolor/48x48/apps/kate.png
 %{_datadir}/icons/hicolor/64x64/apps/kate.png
 %{_datadir}/icons/hicolor/scalable/apps/kate.svgz
+%{_datadir}/appdata/org.kde.kate.appdata.xml
 %{_mandir}/man1/kate.1.xz
 %doc %{_docdir}/HTML/en/kate
 
@@ -188,6 +189,7 @@ Features :
 %{_datadir}/applications/kwriteroot.desktop
 %{_datadir}/applications/org.kde.kwrite.desktop
 %{_datadir}/kxmlgui5/kwrite/kwriteui.rc
+%{_datadir}/appdata/org.kde.kwrite.appdata.xml
 %doc %{_docdir}/HTML/en/kwrite
 
 #---------------------------------------------------------------
@@ -195,8 +197,7 @@ Features :
 %prep
 %setup -q
 #apply_patches
-%cmake -G Ninja \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+%cmake_kde5
 
 %build
 ninja -C build
