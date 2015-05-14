@@ -38,7 +38,6 @@ BuildRequires:	pkgconfig(libkactivities)
 BuildRequires:	pkgconfig(libxslt)
 BuildRequires:	pkgconfig(python)
 BuildRequires:	pkgconfig(QJson)
-BuildRequires:	ninja
 Requires:	konsole >= 1:%{version}
 Requires:	katepart = %{EVRD}
 Requires:	kate-extensions = %{EVRD}
@@ -200,9 +199,9 @@ Features :
 %cmake_kde5
 
 %build
-ninja -C build
+%ninja -C build
 
 %install
-DESTDIR="%{buildroot}" ninja install -C build
+%ninja_install -C build
 
 install -m 0644 %{SOURCE1} %{buildroot}%{_datadir}/applications/kwriteroot.desktop
