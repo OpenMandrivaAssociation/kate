@@ -1,8 +1,8 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Summary:	Advanced text editor
 Name:		kate
-Version:	15.04.3
-Release:	2
+Version:	15.08.0
+Release:	1
 Epoch:		3
 License:	GPLv2+ LGPLv2+
 Group:		Graphical desktop/KDE
@@ -153,17 +153,22 @@ Extensions for the Kate editor
 %{_libdir}/qt5/plugins/ktexteditor/katekonsoleplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/kateopenheaderplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/kateprojectplugin.so
+%{_libdir}/qt5/plugins/ktexteditor/katereplicodeplugin.so
+%{_libdir}/qt5/plugins/ktexteditor/kterustcompletionplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/katesearchplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/katesnippetsplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/katesqlplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/katesymbolviewerplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/katexmltoolsplugin.so
+%{_libdir}/qt5/plugins/ktexteditor/ktexteditor_lumen.so
 %{_libdir}/qt5/plugins/ktexteditor/tabswitcherplugin.so
 %{_datadir}/icons/hicolor/16x16/actions/sql-field-pk.png
 %{_datadir}/icons/hicolor/16x16/actions/sql-field-red.png
 %{_datadir}/icons/hicolor/16x16/actions/sql-field.png
 %{_datadir}/icons/hicolor/16x16/actions/sql-table.png
 %{_datadir}/icons/hicolor/16x16/actions/sql-view.png
+%{_datadir}/kxmlgui5/katereplicodeplugin
+%{_datadir}/kxmlgui5/kterustcompletion
 
 #-----------------------------------------------------------------------------
 
