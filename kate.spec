@@ -32,12 +32,10 @@ BuildRequires:	cmake(KF5TextEditor)
 BuildRequires:	cmake(KF5WindowSystem)
 BuildRequires:	cmake(KF5XmlGui)
 BuildRequires:	cmake(KF5NewStuff)
-BuildRequires:	libltdl-devel
+BuildRequires:	cmake(KF5Activities)
 BuildRequires:	pkgconfig(hunspell)
-BuildRequires:	pkgconfig(libkactivities)
 BuildRequires:	pkgconfig(libxslt)
 BuildRequires:	pkgconfig(python)
-BuildRequires:	pkgconfig(QJson)
 Requires:	konsole >= 1:%{version}
 Requires:	katepart = %{EVRD}
 Requires:	kate-extensions = %{EVRD}
