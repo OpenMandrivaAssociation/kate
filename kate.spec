@@ -62,14 +62,7 @@ A fast and advanced text editor with nice plugins for KDE 5.
 %files
 %{_bindir}/kate
 %{_datadir}/applications/org.kde.kate.desktop
-%{_datadir}/icons/hicolor/128x128/apps/kate.png
-%{_datadir}/icons/hicolor/16x16/apps/kate.png
-%{_datadir}/icons/hicolor/22x22/actions/debug-kategdb.png
-%{_datadir}/icons/hicolor/22x22/apps/kate.png
-%{_datadir}/icons/hicolor/32x32/apps/kate.png
-%{_datadir}/icons/hicolor/48x48/apps/kate.png
-%{_datadir}/icons/hicolor/64x64/apps/kate.png
-%{_datadir}/icons/hicolor/scalable/apps/kate.svgz
+%{_iconsdir/hicolor/*/apps/kate.*[gz]
 %{_datadir}/appdata/org.kde.kate.appdata.xml
 %{_mandir}/man1/kate.1.xz
 %doc %{_docdir}/HTML/en/kate
@@ -107,7 +100,6 @@ This package contains the Kate KPart component.
 %{_datadir}/kservices5/plasma-applet-org.kde.plasma.katesessions.desktop
 %{_datadir}/kservices5/plasma-dataengine-katesessions.desktop
 %{_datadir}/kxmlgui5/katexmltools/ui.rc
-%{_datadir}/kxmlgui5/tabswitcher/ui.rc
 %{_datadir}/plasma/plasmoids/org.kde.plasma.katesessions/contents/ui/KateSessionsItemDelegate.qml
 %{_datadir}/plasma/plasmoids/org.kde.plasma.katesessions/contents/ui/Menu.qml
 %{_datadir}/plasma/plasmoids/org.kde.plasma.katesessions/contents/ui/katesessions.qml
@@ -144,14 +136,7 @@ Extensions for the Kate editor
 %{_libdir}/qt5/plugins/ktexteditor/katexmltoolsplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/ktexteditor_lumen.so
 %{_libdir}/qt5/plugins/ktexteditor/tabswitcherplugin.so
-%{_datadir}/icons/hicolor/16x16/actions/sql-field-pk.png
-%{_datadir}/icons/hicolor/16x16/actions/sql-field-red.png
-%{_datadir}/icons/hicolor/16x16/actions/sql-field.png
-%{_datadir}/icons/hicolor/16x16/actions/sql-table.png
-%{_datadir}/icons/hicolor/16x16/actions/sql-view.png
-%{_datadir}/kxmlgui5/katereplicodeplugin
-%{_datadir}/kxmlgui5/kterustcompletion
-
+%{_libdir}/qt5/plugins/ktexteditor/textfilterplugin.so
 #-----------------------------------------------------------------------------
 
 %package -n kwrite
@@ -174,7 +159,6 @@ Features :
 %{_datadir}/applications/kwriteroot.desktop
 %{_datadir}/applications/org.kde.kwrite.desktop
 %{_datadir}/appdata/org.kde.kwrite.appdata.xml
-%{_iconsdir}/*/*/*/*
 %doc %{_docdir}/HTML/en/kwrite
 
 #---------------------------------------------------------------
