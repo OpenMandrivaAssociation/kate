@@ -87,9 +87,6 @@ Conflicts:	kate < 3:4.10.5-2
 This package contains the Kate KPart component.
 
 %files -n katepart
-%{_sysconfdir}/xdg/katerc
-%{_sysconfdir}/xdg/ktexteditor_codesnippets_core.knsrc
-%{_libdir}/libkdeinit5_kate.so
 %dir %{_libdir}/qt5/plugins/ktexteditor
 %{_libdir}/qt5/plugins/plasma/dataengine/plasma_engine_katesessions.so
 %dir %{_datadir}/kateproject
@@ -107,22 +104,8 @@ This package contains the Kate KPart component.
 %{_datadir}/katexmltools/xhtml1-strict.dtd.xml
 %{_datadir}/katexmltools/xhtml1-transitional.dtd.xml
 %{_datadir}/katexmltools/xslt-1.0.dtd.xml
-%{_datadir}/kservices5/katesymbolviewerplugin.desktop
 %{_datadir}/kservices5/plasma-applet-org.kde.plasma.katesessions.desktop
 %{_datadir}/kservices5/plasma-dataengine-katesessions.desktop
-%{_datadir}/kxmlgui5/kate/kateui.rc
-%{_datadir}/kxmlgui5/katebuild/ui.rc
-%{_datadir}/kxmlgui5/katecloseexceptplugin/ui.rc
-%{_datadir}/kxmlgui5/katectags/ui.rc
-%{_datadir}/kxmlgui5/katefiletree/ui.rc
-%{_datadir}/kxmlgui5/kategdb/ui.rc
-%{_datadir}/kxmlgui5/katekonsole/ui.rc
-%{_datadir}/kxmlgui5/kateopenheaderplugin/ui.rc
-%{_datadir}/kxmlgui5/kateproject/ui.rc
-%{_datadir}/kxmlgui5/katesearch/ui.rc
-%{_datadir}/kxmlgui5/katesnippets/ui.rc
-%{_datadir}/kxmlgui5/katesql/ui.rc
-%{_datadir}/kxmlgui5/katesymbolviewer/ui.rc
 %{_datadir}/kxmlgui5/katexmltools/ui.rc
 %{_datadir}/kxmlgui5/tabswitcher/ui.rc
 %{_datadir}/plasma/plasmoids/org.kde.plasma.katesessions/contents/ui/KateSessionsItemDelegate.qml
@@ -188,11 +171,10 @@ Features :
 
 %files -n kwrite
 %{_bindir}/kwrite
-%{_libdir}/libkdeinit5_kwrite.so
 %{_datadir}/applications/kwriteroot.desktop
 %{_datadir}/applications/org.kde.kwrite.desktop
-%{_datadir}/kxmlgui5/kwrite/kwriteui.rc
 %{_datadir}/appdata/org.kde.kwrite.appdata.xml
+%{_iconsdir}/*/*/*/*
 %doc %{_docdir}/HTML/en/kwrite
 
 #---------------------------------------------------------------
