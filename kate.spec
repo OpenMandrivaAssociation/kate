@@ -159,6 +159,7 @@ Features :
 %{_datadir}/applications/kwriteroot.desktop
 %{_datadir}/applications/org.kde.kwrite.desktop
 %{_datadir}/appdata/org.kde.kwrite.appdata.xml
+%{_iconsdir}/hicolor/*/apps/kwrite.*[gz]
 %doc %{_docdir}/HTML/en/kwrite
 
 #---------------------------------------------------------------
