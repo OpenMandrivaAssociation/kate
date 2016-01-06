@@ -1,4 +1,5 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
+
 Summary:	Advanced text editor
 Name:		kate
 Version:	15.12.0
@@ -62,11 +63,10 @@ A fast and advanced text editor with nice plugins for KDE 5.
 %files
 %{_bindir}/kate
 %{_datadir}/applications/org.kde.kate.desktop
-%{_iconsdir/hicolor/*/apps/kate.*[gz]
+%{_iconsdir}/hicolor/*/apps/kate.*[gz]
 %{_datadir}/appdata/org.kde.kate.appdata.xml
 %{_mandir}/man1/kate.1.xz
 %doc %{_docdir}/HTML/en/kate
-
 
 #-----------------------------------------------------------------------------
 
