@@ -3,7 +3,7 @@
 Summary:	Advanced text editor
 Name:		kate
 Version:	15.12.2
-Release:	1
+Release:	2
 Epoch:		3
 License:	GPLv2+ LGPLv2+
 Group:		Graphical desktop/KDE
@@ -111,10 +111,10 @@ This package contains the Kate KPart component.
 %package extensions
 Summary:	Extensions for the Kate editor
 Group:		Graphical desktop/KDE
-Requires:	%{name} = %{EVRD}
+Requires:	%{name}
 
 %description extensions
-Extensions for the Kate editor
+Extensions for the Kate editor.
 
 %files extensions
 %{_libdir}/qt5/plugins/ktexteditor/katebacktracebrowserplugin.so
