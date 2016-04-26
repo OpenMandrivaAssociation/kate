@@ -2,13 +2,13 @@
 
 Summary:	Advanced text editor
 Name:		kate
-Version:	15.12.3
+Version:	16.04.0
 Release:	1
 Epoch:		3
 License:	GPLv2+ LGPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://kate-editor.org/
-Source0:	ftp://ftp.kde.org/pub/kde/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 Source1:	kwriteroot.desktop
 Source10:	%{name}.rpmlintrc
 Patch0:		kate-4.12.90-python_library_realpath.patch
