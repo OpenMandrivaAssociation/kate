@@ -38,7 +38,7 @@ BuildRequires:	cmake(KF5Activities)
 BuildRequires:	pkgconfig(hunspell)
 BuildRequires:	pkgconfig(libxslt)
 BuildRequires:	pkgconfig(python)
-Requires:	konsole >= 1:%{version}
+Requires:	konsole >= 1:16.04.1
 Requires:	katepart = %{EVRD}
 Requires:	kate-extensions = %{EVRD}
 Conflicts:	kdelibs4-core < 2:4.6.90
