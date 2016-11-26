@@ -104,6 +104,7 @@ This package contains the Kate KPart component.
 %{_datadir}/plasma/plasmoids/org.kde.plasma.katesessions/contents/ui/Menu.qml
 %{_datadir}/plasma/plasmoids/org.kde.plasma.katesessions/contents/ui/katesessions.qml
 %{_datadir}/plasma/plasmoids/org.kde.plasma.katesessions/metadata.desktop
+%{_datadir}/plasma/plasmoids/org.kde.plasma.katesessions/metadata.json
 %{_datadir}/plasma/services/org.kde.plasma.katesessions.operations
 %doc %{_docdir}/HTML/en/katepart
 
