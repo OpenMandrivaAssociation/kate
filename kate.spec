@@ -64,8 +64,8 @@ A fast and advanced text editor with nice plugins for KDE 5.
 %{_bindir}/kate
 %{_datadir}/applications/org.kde.kate.desktop
 %{_iconsdir}/hicolor/*/apps/kate.*[gz]
-%{_datadir}/appdata/org.kde.kate.appdata.xml
-%{_mandir}/man1/kate.1.xz
+%{_datadir}/metainfo/org.kde.kate.appdata.xml
+%{_mandir}/man1/kate.1.*
 %doc %{_docdir}/HTML/en/kate
 
 #-----------------------------------------------------------------------------
@@ -99,7 +99,7 @@ This package contains the Kate KPart component.
 %{_datadir}/katexmltools/xslt-1.0.dtd.xml
 %{_datadir}/kservices5/plasma-applet-org.kde.plasma.katesessions.desktop
 %{_datadir}/kservices5/plasma-dataengine-katesessions.desktop
-%{_datadir}/kxmlgui5/katexmltools/ui.rc
+%{_datadir}/metainfo/org.kde.plasma.katesessions.appdata.xml
 %{_datadir}/plasma/plasmoids/org.kde.plasma.katesessions/contents/ui/KateSessionsItemDelegate.qml
 %{_datadir}/plasma/plasmoids/org.kde.plasma.katesessions/contents/ui/Menu.qml
 %{_datadir}/plasma/plasmoids/org.kde.plasma.katesessions/contents/ui/katesessions.qml
@@ -137,6 +137,7 @@ Extensions for the Kate editor.
 %{_libdir}/qt5/plugins/ktexteditor/ktexteditor_lumen.so
 %{_libdir}/qt5/plugins/ktexteditor/tabswitcherplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/textfilterplugin.so
+%{_libdir}/qt5/plugins/ktexteditor/katexmlcheckplugin.so
 #-----------------------------------------------------------------------------
 
 %package -n kwrite
@@ -158,7 +159,7 @@ Features :
 %{_bindir}/kwrite
 %{_datadir}/applications/kwriteroot.desktop
 %{_datadir}/applications/org.kde.kwrite.desktop
-%{_datadir}/appdata/org.kde.kwrite.appdata.xml
+%{_datadir}/metainfo/org.kde.kwrite.appdata.xml
 %{_iconsdir}/hicolor/*/apps/kwrite.*[gz]
 %doc %{_docdir}/HTML/en/kwrite
 
