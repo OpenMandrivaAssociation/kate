@@ -2,7 +2,7 @@
 
 Summary:	Advanced text editor
 Name:		kate
-Version:	16.08.3
+Version:	16.12.2
 Release:	1
 Epoch:		3
 License:	GPLv2+ LGPLv2+
@@ -99,7 +99,6 @@ This package contains the Kate KPart component.
 %{_datadir}/katexmltools/xslt-1.0.dtd.xml
 %{_datadir}/kservices5/plasma-applet-org.kde.plasma.katesessions.desktop
 %{_datadir}/kservices5/plasma-dataengine-katesessions.desktop
-%{_datadir}/metainfo/org.kde.plasma.katesessions.appdata.xml
 %{_datadir}/plasma/plasmoids/org.kde.plasma.katesessions/contents/ui/KateSessionsItemDelegate.qml
 %{_datadir}/plasma/plasmoids/org.kde.plasma.katesessions/contents/ui/Menu.qml
 %{_datadir}/plasma/plasmoids/org.kde.plasma.katesessions/contents/ui/katesessions.qml
