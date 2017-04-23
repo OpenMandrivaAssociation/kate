@@ -2,7 +2,7 @@
 
 Summary:	Advanced text editor
 Name:		kate
-Version:	17.03.80
+Version:	17.04.0
 Release:	1
 Epoch:		3
 License:	GPLv2+ LGPLv2+
@@ -67,7 +67,6 @@ A fast and advanced text editor with nice plugins for KDE 5.
 %{_datadir}/metainfo/org.kde.kate.appdata.xml
 %{_datadir}/metainfo/org.kde.plasma.katesessions.appdata.xml
 %{_mandir}/man1/kate.1.*
-%doc %{_docdir}/HTML/en/kate
 
 #-----------------------------------------------------------------------------
 
@@ -80,7 +79,7 @@ Conflicts:	kate < 3:4.10.5-2
 %description -n katepart
 This package contains the Kate KPart component.
 
-%files -n katepart
+%files -n katepart -f all.lang
 %dir %{_libdir}/qt5/plugins/ktexteditor
 %{_libdir}/qt5/plugins/plasma/dataengine/plasma_engine_katesessions.so
 %dir %{_datadir}/kateproject
@@ -106,7 +105,6 @@ This package contains the Kate KPart component.
 %{_datadir}/plasma/plasmoids/org.kde.plasma.katesessions/metadata.desktop
 %{_datadir}/plasma/plasmoids/org.kde.plasma.katesessions/metadata.json
 %{_datadir}/plasma/services/org.kde.plasma.katesessions.operations
-%doc %{_docdir}/HTML/en/katepart
 
 #-----------------------------------------------------------------------------
 %package extensions
@@ -117,7 +115,7 @@ Requires:	%{name}
 %description extensions
 Extensions for the Kate editor.
 
-%files extensions
+%files extensions -f plugins_lang
 %{_libdir}/qt5/plugins/ktexteditor/katebacktracebrowserplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/katebuildplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/katecloseexceptplugin.so
@@ -156,13 +154,12 @@ Features :
     Plugin support
     Vi input mode
 
-%files -n kwrite
+%files -n kwrite -f kwrite_lang
 %{_bindir}/kwrite
 %{_datadir}/applications/kwriteroot.desktop
 %{_datadir}/applications/org.kde.kwrite.desktop
 %{_datadir}/metainfo/org.kde.kwrite.appdata.xml
 %{_iconsdir}/hicolor/*/apps/kwrite.*[gz]
-%doc %{_docdir}/HTML/en/kwrite
 
 #---------------------------------------------------------------
 
@@ -178,3 +175,32 @@ Features :
 %ninja_install -C build
 
 install -m 0644 %{SOURCE1} %{buildroot}%{_datadir}/applications/kwriteroot.desktop
+
+%find_lang kate-ctags-plugin
+%find_lang kate-replicode-plugin
+%find_lang kate --with-man --with-html
+%find_lang katepart --with-html
+%find_lang katebacktracebrowserplugin
+%find_lang katebuild-plugin
+%find_lang katecloseexceptplugin
+%find_lang katefilebrowserplugin
+%find_lang katefiletree
+%find_lang kategdbplugin
+%find_lang katekonsoleplugin
+%find_lang kateopenheader
+%find_lang kateproject
+%find_lang katesearch
+%find_lang katesnippetsplugin
+%find_lang katesql
+%find_lang katesymbolviewer
+%find_lang katetextfilter
+%find_lang katexmlcheck
+%find_lang katexmltools
+%find_lang kterustcompletion
+%find_lang kwrite --with-html
+%find_lang plasma_applet_org.kde.plasma.katesessions
+%find_lang tabswitcherplugin
+mv kwrite.lang kwrite_lang
+cat *plugin.lang >plugins_lang
+rm *plugin.lang
+cat *.lang >all.lang
