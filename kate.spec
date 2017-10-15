@@ -3,7 +3,7 @@
 Summary:	Advanced text editor
 Name:		kate
 Version:	17.04.0
-Release:	1
+Release:	2
 Epoch:		3
 License:	GPLv2+ LGPLv2+
 Group:		Graphical desktop/KDE
@@ -50,7 +50,7 @@ BuildRequires:	cmake(KF5Service)
 BuildRequires:	cmake(KF5ItemModels)
 BuildRequires:	cmake(KF5Notifications)
 BuildRequires:	cmake(KF5ThreadWeaver)
-BuildRequires:	pkgconfig(libgit2)
+BuildRequires:	pkgconfig(libgit2) >= 0.26.0
 # May come back once there's python-kde5
 Obsoletes:	python-kate < %{EVRD}
 # Likely gone for good
