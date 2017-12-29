@@ -2,7 +2,7 @@
 
 Summary:	Advanced text editor
 Name:		kate
-Version:	17.11.90
+Version:	17.12.0
 Release:	1
 Epoch:		3
 License:	GPLv2+ LGPLv2+
