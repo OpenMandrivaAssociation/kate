@@ -2,8 +2,8 @@
 
 Summary:	Advanced text editor
 Name:		kate
-Version:	17.04.0
-Release:	2
+Version:	 17.12.2
+Release:	1
 Epoch:		3
 License:	GPLv2+ LGPLv2+
 Group:		Graphical desktop/KDE
@@ -137,6 +137,7 @@ Extensions for the Kate editor.
 %{_libdir}/qt5/plugins/ktexteditor/tabswitcherplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/textfilterplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/katexmlcheckplugin.so
+%{_libdir}/qt5/plugins/ktexteditor/ktexteditorpreviewplugin.so
 #-----------------------------------------------------------------------------
 
 %package -n kwrite
@@ -197,6 +198,7 @@ install -m 0644 %{SOURCE1} %{buildroot}%{_datadir}/applications/kwriteroot.deskt
 %find_lang katexmlcheck
 %find_lang katexmltools
 %find_lang kterustcompletion
+%find_lang ktexteditorpreviewplugin
 %find_lang kwrite --with-html
 %find_lang plasma_applet_org.kde.plasma.katesessions
 %find_lang tabswitcherplugin
