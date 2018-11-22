@@ -2,8 +2,8 @@
 
 Summary:	Advanced text editor
 Name:		kate
-Version:	 18.08.2
-Release:	2
+Version:	 18.08.3
+Release:	1
 Epoch:		3
 License:	GPLv2+ LGPLv2+
 Group:		Graphical desktop/KDE
