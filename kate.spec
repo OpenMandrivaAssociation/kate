@@ -2,8 +2,8 @@
 
 Summary:	Advanced text editor
 Name:		kate
-Version:	 18.12.1
-Release:	1
+Version:	18.12.1
+Release:	2
 Epoch:		3
 License:	GPLv2+ LGPLv2+
 Group:		Graphical desktop/KDE
@@ -11,7 +11,7 @@ Url:		http://kate-editor.org/
 Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 Source1:	kwriteroot.desktop
 Source10:	%{name}.rpmlintrc
-Patch0:		kate-4.12.90-python_library_realpath.patch
+Patch0:		https://gitweb.frugalware.org/frugalware-current/raw/master/source/kde5/kate/allow-root.patch
 BuildRequires:	binutils-devel
 BuildRequires:	boost-devel
 BuildRequires:	cmake(ECM)
@@ -167,8 +167,7 @@ Features :
 #---------------------------------------------------------------
 
 %prep
-%setup -q
-#apply_patches
+%autosetup -p1
 %cmake_kde5
 
 %build
