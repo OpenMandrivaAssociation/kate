@@ -2,7 +2,7 @@
 
 Summary:	Advanced text editor
 Name:		kate
-Version:	19.04.3
+Version:	19.07.80
 Release:	1
 Epoch:		3
 License:	GPLv2+ LGPLv2+
@@ -201,6 +201,7 @@ install -m 0644 %{SOURCE1} %{buildroot}%{_datadir}/applications/kwriteroot.deskt
 %find_lang kterustcompletion
 %find_lang ktexteditorpreviewplugin
 %find_lang kwrite --with-html
+%find_lang lspclient
 %find_lang plasma_applet_org.kde.plasma.katesessions
 %find_lang tabswitcherplugin
 mv kwrite.lang kwrite_lang
