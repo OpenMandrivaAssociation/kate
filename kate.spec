@@ -2,7 +2,7 @@
 
 Summary:	Advanced text editor
 Name:		kate
-Version:	19.08.3
+Version:	19.11.90
 Release:	1
 Epoch:		3
 License:	GPLv2+ LGPLv2+
@@ -129,17 +129,18 @@ Extensions for the Kate editor.
 %{_libdir}/qt5/plugins/ktexteditor/kateopenheaderplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/kateprojectplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/katereplicodeplugin.so
-%{_libdir}/qt5/plugins/ktexteditor/kterustcompletionplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/katesearchplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/katesnippetsplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/katesqlplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/katesymbolviewerplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/katexmltoolsplugin.so
-%{_libdir}/qt5/plugins/ktexteditor/ktexteditor_lumen.so
 %{_libdir}/qt5/plugins/ktexteditor/tabswitcherplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/textfilterplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/katexmlcheckplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/ktexteditorpreviewplugin.so
+%{_libdir}/qt5/plugins/ktexteditor/externaltoolsplugin.so
+%{_libdir}/qt5/plugins/ktexteditor/lspclientplugin.so
+
 #-----------------------------------------------------------------------------
 
 %package -n kwrite
@@ -198,12 +199,12 @@ install -m 0644 %{SOURCE1} %{buildroot}%{_datadir}/applications/kwriteroot.deskt
 %find_lang katetextfilter
 %find_lang katexmlcheck
 %find_lang katexmltools
-%find_lang kterustcompletion
 %find_lang ktexteditorpreviewplugin
 %find_lang kwrite --with-html
 %find_lang lspclient
 %find_lang plasma_applet_org.kde.plasma.katesessions
 %find_lang tabswitcherplugin
+%find_lang kateexternaltoolsplugin
 mv kwrite.lang kwrite_lang
 cat *plugin.lang >plugins_lang
 rm *plugin.lang
