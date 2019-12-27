@@ -2,13 +2,13 @@
 
 Summary:	Advanced text editor
 Name:		kate
-Version:	19.11.90
+Version:	19.12.0
 Release:	1
 Epoch:		3
 License:	GPLv2+ LGPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://kate-editor.org/
-Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 Source1:	kwriteroot.desktop
 Source10:	%{name}.rpmlintrc
 Patch0:		https://gitweb.frugalware.org/frugalware-current/raw/master/source/kde5/kate/allow-root.patch
@@ -209,3 +209,9 @@ mv kwrite.lang kwrite_lang
 cat *plugin.lang >plugins_lang
 rm *plugin.lang
 cat *.lang >all.lang
+
+# FIXME workaround for gdb 8.3.1 hang while extracting
+# debuginfo
+strip --strip-unneeded %{buildroot}%{_libdir}/qt5/plugins/*/*/*.so \
+	%{buildroot}%{_libdir}/qt5/plugins/*/*.so \
+	%{buildroot}%{_bindir}/*
