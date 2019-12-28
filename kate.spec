@@ -209,9 +209,3 @@ mv kwrite.lang kwrite_lang
 cat *plugin.lang >plugins_lang
 rm *plugin.lang
 cat *.lang >all.lang
-
-# FIXME workaround for gdb 8.3.1 hang while extracting
-# debuginfo
-strip --strip-unneeded %{buildroot}%{_libdir}/qt5/plugins/*/*/*.so \
-	%{buildroot}%{_libdir}/qt5/plugins/*/*.so \
-	%{buildroot}%{_bindir}/*
