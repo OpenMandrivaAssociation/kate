@@ -53,6 +53,7 @@ BuildRequires:	cmake(KF5ItemModels)
 BuildRequires:	cmake(KF5Notifications)
 BuildRequires:	cmake(KF5ThreadWeaver)
 BuildRequires:	cmake(KF5SyntaxHighlighting)
+BuildRequires:	cmake(KF5TextEditor)
 BuildRequires:	pkgconfig(libgit2) >= 0.26.0
 # May come back once there's python-kde5
 Obsoletes:	python-kate < %{EVRD}
