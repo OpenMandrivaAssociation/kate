@@ -12,6 +12,7 @@ Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name
 Source1:	kwriteroot.desktop
 Source10:	%{name}.rpmlintrc
 Patch0:		https://gitweb.frugalware.org/frugalware-current/raw/master/source/kde5/kate/allow-root.patch
+Patch1:		kate-20.03.90-qt-5.15.patch
 BuildRequires:	binutils-devel
 BuildRequires:	boost-devel
 BuildRequires:	cmake(ECM)
