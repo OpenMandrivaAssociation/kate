@@ -2,8 +2,8 @@
 
 Summary:	Advanced text editor
 Name:		kate
-Version:	20.03.90
-Release:	2
+Version:	20.04.0
+Release:	1
 Epoch:		3
 License:	GPLv2+ LGPLv2+
 Group:		Graphical desktop/KDE
@@ -12,7 +12,6 @@ Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name
 Source1:	kwriteroot.desktop
 Source10:	%{name}.rpmlintrc
 Patch0:		https://gitweb.frugalware.org/frugalware-current/raw/master/source/kde5/kate/allow-root.patch
-Patch1:		kate-20.03.90-qt-5.15.patch
 BuildRequires:	binutils-devel
 BuildRequires:	boost-devel
 BuildRequires:	cmake(ECM)
