@@ -2,7 +2,7 @@
 
 Summary:	Advanced text editor
 Name:		kate
-Version:	20.04.2
+Version:	20.04.3
 Release:	1
 Epoch:		3
 License:	GPLv2+ LGPLv2+
