@@ -2,7 +2,7 @@
 
 Summary:	Advanced text editor
 Name:		kate
-Version:	20.12.3
+Version:	21.03.80
 Release:	1
 Epoch:		3
 License:	GPLv2+ LGPLv2+
@@ -124,10 +124,12 @@ Extensions for the Kate editor.
 %{_libdir}/qt5/plugins/ktexteditor/katebacktracebrowserplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/katebuildplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/katecloseexceptplugin.so
+%{_libdir}/qt5/plugins/ktexteditor/katecolorpickerplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/katectagsplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/katefilebrowserplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/katefiletreeplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/kategdbplugin.so
+%{_libdir}/qt5/plugins/ktexteditor/kategitblameplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/katekonsoleplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/kateopenheaderplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/kateprojectplugin.so
@@ -208,6 +210,8 @@ install -m 0644 %{SOURCE1} %{buildroot}%{_datadir}/applications/kwriteroot.deskt
 %find_lang plasma_applet_org.kde.plasma.katesessions
 %find_lang tabswitcherplugin
 %find_lang kateexternaltoolsplugin
+%find_lang katecolorpickerplugin
+%find_lang kategitblameplugin
 mv kwrite.lang kwrite_lang
 cat *plugin.lang >plugins_lang
 rm *plugin.lang
