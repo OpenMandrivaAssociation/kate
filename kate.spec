@@ -2,7 +2,7 @@
 
 Summary:	Advanced text editor
 Name:		kate
-Version:	21.04.2
+Version:	21.07.80
 Release:	1
 Epoch:		3
 License:	GPLv2+ LGPLv2+
@@ -102,7 +102,6 @@ This package contains the Kate KPart component.
 %{_datadir}/katexmltools/xhtml1-strict.dtd.xml
 %{_datadir}/katexmltools/xhtml1-transitional.dtd.xml
 %{_datadir}/katexmltools/xslt-1.0.dtd.xml
-%{_datadir}/kservices5/plasma-applet-org.kde.plasma.katesessions.desktop
 %{_datadir}/kservices5/plasma-dataengine-katesessions.desktop
 %{_datadir}/plasma/plasmoids/org.kde.plasma.katesessions/contents/ui/KateSessionsItemDelegate.qml
 %{_datadir}/plasma/plasmoids/org.kde.plasma.katesessions/contents/ui/Menu.qml
@@ -131,7 +130,6 @@ Extensions for the Kate editor.
 %{_libdir}/qt5/plugins/ktexteditor/kategdbplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/kategitblameplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/katekonsoleplugin.so
-%{_libdir}/qt5/plugins/ktexteditor/kateopenheaderplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/kateprojectplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/katereplicodeplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/katesearchplugin.so
@@ -195,7 +193,6 @@ install -m 0644 %{SOURCE1} %{buildroot}%{_datadir}/applications/kwriteroot.deskt
 %find_lang katefiletree
 %find_lang kategdbplugin
 %find_lang katekonsoleplugin
-%find_lang kateopenheader
 %find_lang kateproject
 %find_lang katesearch
 %find_lang katesnippetsplugin
