@@ -1,11 +1,11 @@
-diff -up kate-21.03.80/kate/main.cpp.1~ kate-21.03.80/kate/main.cpp
---- kate-21.03.80/kate/main.cpp.1~	2021-03-22 13:43:05.331656327 +0100
-+++ kate-21.03.80/kate/main.cpp	2021-03-22 13:59:01.913742633 +0100
+diff -up kate-21.08.0/kate/main.cpp.1~ kate-21.08.0/kate/main.cpp
+--- kate-21.08.0/kate/main.cpp.1~	2021-08-10 05:58:20.947705262 +0200
++++ kate-21.08.0/kate/main.cpp	2021-08-10 06:02:26.920126734 +0200
 @@ -45,24 +45,6 @@
  
  int main(int argc, char **argv)
  {
--#ifndef Q_OS_WIN
+-#if !defined(Q_OS_WIN) && !defined(Q_OS_HAIKU)
 -    // Prohibit using sudo or kdesu (but allow using the root user directly)
 -    if (getuid() == 0) {
 -        if (!qEnvironmentVariableIsEmpty("SUDO_USER")) {
@@ -26,14 +26,14 @@ diff -up kate-21.03.80/kate/main.cpp.1~ kate-21.03.80/kate/main.cpp
      /**
       * init resources from our static lib
       */
-diff -up kate-21.03.80/kwrite/main.cpp.1~ kate-21.03.80/kwrite/main.cpp
---- kate-21.03.80/kwrite/main.cpp.1~	2021-03-22 13:43:05.331656327 +0100
-+++ kate-21.03.80/kwrite/main.cpp	2021-03-22 13:59:25.044824918 +0100
+diff -up kate-21.08.0/kwrite/main.cpp.1~ kate-21.08.0/kwrite/main.cpp
+--- kate-21.08.0/kwrite/main.cpp.1~	2021-08-10 05:58:20.947705262 +0200
++++ kate-21.08.0/kwrite/main.cpp	2021-08-10 06:02:44.198226984 +0200
 @@ -37,25 +37,6 @@
  
  extern "C" Q_DECL_EXPORT int main(int argc, char **argv)
  {
--#ifndef Q_OS_WIN
+-#if !defined(Q_OS_WIN) && !defined(Q_OS_HAIKU)
 -    // Prohibit using sudo or kdesu (but allow using the root user directly)
 -    if (getuid() == 0) {
 -        if (!qEnvironmentVariableIsEmpty("SUDO_USER")) {
