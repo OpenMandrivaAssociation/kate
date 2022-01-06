@@ -2,7 +2,7 @@
 
 Summary:	Advanced text editor
 Name:		kate
-Version:	21.12.0
+Version:	21.12.1
 Release:	1
 Epoch:		3
 License:	GPLv2+ LGPLv2+
@@ -142,6 +142,7 @@ Extensions for the Kate editor.
 %{_libdir}/qt5/plugins/ktexteditor/textfilterplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/katexmlcheckplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/ktexteditorpreviewplugin.so
+%{_libdir}/qt5/plugins/ktexteditor/rainbowparens.so
 %{_libdir}/qt5/plugins/ktexteditor/externaltoolsplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/lspclientplugin.so
 %{_libdir}/qt5/plugins/ktexteditor/compilerexplorer.so
