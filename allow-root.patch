@@ -1,7 +1,7 @@
-diff -up kate-21.08.0/kate/main.cpp.1~ kate-21.08.0/kate/main.cpp
---- kate-21.08.0/kate/main.cpp.1~	2021-08-10 05:58:20.947705262 +0200
-+++ kate-21.08.0/kate/main.cpp	2021-08-10 06:02:26.920126734 +0200
-@@ -45,24 +45,6 @@
+diff -up kate-22.03.80/kate/main.cpp.1~ kate-22.03.80/kate/main.cpp
+--- kate-22.03.80/kate/main.cpp.1~	2022-04-05 02:57:55.548457272 +0200
++++ kate-22.03.80/kate/main.cpp	2022-04-05 03:06:03.023749336 +0200
+@@ -46,24 +46,6 @@
  
  int main(int argc, char **argv)
  {
@@ -9,15 +9,15 @@ diff -up kate-21.08.0/kate/main.cpp.1~ kate-21.08.0/kate/main.cpp
 -    // Prohibit using sudo or kdesu (but allow using the root user directly)
 -    if (getuid() == 0) {
 -        if (!qEnvironmentVariableIsEmpty("SUDO_USER")) {
--            std::cout << "Executing Kate with sudo is not possible due to unfixable security vulnerabilities. "
--                         "It is also not necessary; simply use Kate normally, and you will be prompted for "
--                         "elevated privileges when saving documents if needed."
+-            std::cout << "Running Kate with sudo can cause bugs and expose you to security vulnerabilities. "
+-                         "Instead use Kate normally and you will be prompted for elevated privileges when "
+-                         "saving documents if needed."
 -                      << std::endl;
 -            return EXIT_FAILURE;
 -        } else if (!qEnvironmentVariableIsEmpty("KDESU_USER")) {
--            std::cout << "Executing Kate with kdesu is not possible due to unfixable security vulnerabilities. "
--                         "It is also not necessary; simply use Kate normally, and you will be prompted for "
--                         "elevated privileges when saving documents if needed."
+-            std::cout << "Running Kate with kdesu can cause bugs and expose you to security vulnerabilities. "
+-                         "Instead use Kate normally and you will be prompted for elevated privileges when "
+-                         "saving documents if needed."
 -                      << std::endl;
 -            return EXIT_FAILURE;
 -        }
@@ -26,10 +26,10 @@ diff -up kate-21.08.0/kate/main.cpp.1~ kate-21.08.0/kate/main.cpp
      /**
       * init resources from our static lib
       */
-diff -up kate-21.08.0/kwrite/main.cpp.1~ kate-21.08.0/kwrite/main.cpp
---- kate-21.08.0/kwrite/main.cpp.1~	2021-08-10 05:58:20.947705262 +0200
-+++ kate-21.08.0/kwrite/main.cpp	2021-08-10 06:02:44.198226984 +0200
-@@ -37,25 +37,6 @@
+diff -up kate-22.03.80/kwrite/main.cpp.1~ kate-22.03.80/kwrite/main.cpp
+--- kate-22.03.80/kwrite/main.cpp.1~	2022-04-05 02:57:55.548457272 +0200
++++ kate-22.03.80/kwrite/main.cpp	2022-04-05 03:06:30.834791130 +0200
+@@ -38,25 +38,6 @@
  
  extern "C" Q_DECL_EXPORT int main(int argc, char **argv)
  {
@@ -37,15 +37,15 @@ diff -up kate-21.08.0/kwrite/main.cpp.1~ kate-21.08.0/kwrite/main.cpp
 -    // Prohibit using sudo or kdesu (but allow using the root user directly)
 -    if (getuid() == 0) {
 -        if (!qEnvironmentVariableIsEmpty("SUDO_USER")) {
--            std::cout << "Executing KWrite with sudo is not possible due to unfixable security vulnerabilities. "
--                         "It is also not necessary; simply use KWrite normally, and you will be prompted for "
--                         "elevated privileges when saving documents if needed."
+-            std::cout << "Running KWrite with sudo can cause bugs and expose you to security vulnerabilities. "
+-                         "Instead use KWrite normally and you will be prompted for elevated privileges when "
+-                         "saving documents if needed."
 -                      << std::endl;
 -            return EXIT_FAILURE;
 -        } else if (!qEnvironmentVariableIsEmpty("KDESU_USER")) {
--            std::cout << "Executing KWrite with kdesu is not possible due to unfixable security vulnerabilities. "
--                         "It is also not necessary; simply use KWrite normally, and you will be prompted for "
--                         "elevated privileges when saving documents if needed."
+-            std::cout << "Running KWrite with kdesu can cause bugs and expose you to security vulnerabilities. "
+-                         "Instead use KWrite normally and you will be prompted for elevated privileges when "
+-                         "saving documents if needed."
 -                      << std::endl;
 -            return EXIT_FAILURE;
 -        }
