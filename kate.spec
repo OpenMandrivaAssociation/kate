@@ -3,7 +3,7 @@
 Summary:	Advanced text editor
 Name:		kate
 Version:	22.04.3
-Release:	1
+Release:	2
 Epoch:		3
 License:	GPLv2+ LGPLv2+
 Group:		Graphical desktop/KDE
@@ -37,6 +37,7 @@ BuildRequires:	cmake(KF5XmlGui)
 BuildRequires:	cmake(KF5NewStuff)
 BuildRequires:	cmake(KF5Activities)
 BuildRequires:	cmake(KF5DBusAddons)
+BuildRequires:	desktop-file-utils
 BuildRequires:	pkgconfig(hunspell)
 BuildRequires:	pkgconfig(libxslt)
 BuildRequires:	pkgconfig(python)
@@ -184,6 +185,9 @@ Features :
 
 %install
 %ninja_install -C build
+
+desktop-file-install    --remove-category="Development;" \
+                        --dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/org.kde.kate.desktop
 
 install -m 0644 %{SOURCE1} %{buildroot}%{_datadir}/applications/kwriteroot.desktop
 
