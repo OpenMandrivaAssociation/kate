@@ -1,7 +1,7 @@
-diff -up kate-22.03.80/kate/main.cpp.1~ kate-22.03.80/kate/main.cpp
---- kate-22.03.80/kate/main.cpp.1~	2022-04-05 02:57:55.548457272 +0200
-+++ kate-22.03.80/kate/main.cpp	2022-04-05 03:06:03.023749336 +0200
-@@ -46,24 +46,6 @@
+diff -up kate-22.07.90/apps/kate/main.cpp.1~ kate-22.07.90/apps/kate/main.cpp
+--- kate-22.07.90/apps/kate/main.cpp.1~	2022-08-04 00:43:58.000000000 +0200
++++ kate-22.07.90/apps/kate/main.cpp	2022-08-06 22:32:22.458222401 +0200
+@@ -44,24 +44,6 @@
  
  int main(int argc, char **argv)
  {
@@ -26,10 +26,10 @@ diff -up kate-22.03.80/kate/main.cpp.1~ kate-22.03.80/kate/main.cpp
      /**
       * init resources from our static lib
       */
-diff -up kate-22.03.80/kwrite/main.cpp.1~ kate-22.03.80/kwrite/main.cpp
---- kate-22.03.80/kwrite/main.cpp.1~	2022-04-05 02:57:55.548457272 +0200
-+++ kate-22.03.80/kwrite/main.cpp	2022-04-05 03:06:30.834791130 +0200
-@@ -38,25 +38,6 @@
+diff -up kate-22.07.90/apps/kwrite/main.cpp.1~ kate-22.07.90/apps/kwrite/main.cpp
+--- kate-22.07.90/apps/kwrite/main.cpp.1~	2022-08-06 22:32:22.458222401 +0200
++++ kate-22.07.90/apps/kwrite/main.cpp	2022-08-06 22:32:49.177470666 +0200
+@@ -24,25 +24,6 @@
  
  extern "C" Q_DECL_EXPORT int main(int argc, char **argv)
  {
@@ -52,6 +52,6 @@ diff -up kate-22.03.80/kwrite/main.cpp.1~ kate-22.03.80/kwrite/main.cpp
 -    }
 -#endif
 -
+ #if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
      /**
       * enable high dpi support
-      */

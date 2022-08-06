@@ -2,8 +2,8 @@
 
 Summary:	Advanced text editor
 Name:		kate
-Version:	22.04.3
-Release:	2
+Version:	22.07.90
+Release:	1
 Epoch:		3
 License:	GPLv2+ LGPLv2+
 Group:		Graphical desktop/KDE
@@ -68,6 +68,7 @@ A fast and advanced text editor with nice plugins for KDE 5.
 
 %files
 %{_bindir}/kate
+%{_libdir}/libkateprivate.so.*
 %{_datadir}/applications/org.kde.kate.desktop
 %{_iconsdir}/hicolor/*/apps/kate.*[gz]
 %{_datadir}/metainfo/org.kde.kate.appdata.xml
