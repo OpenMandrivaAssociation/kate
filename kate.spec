@@ -2,7 +2,7 @@
 
 Summary:	Advanced text editor
 Name:		kate
-Version:	22.08.3
+Version:	22.12.0
 Release:	1
 Epoch:		3
 License:	GPLv2+ LGPLv2+
@@ -69,10 +69,12 @@ A fast and advanced text editor with nice plugins for KDE 5.
 %files
 %{_bindir}/kate
 %{_libdir}/libkateprivate.so.*
+%{_libdir}/qt5/plugins/ktexteditor/keyboardmacrosplugin.so
+%{_datadir}/kconf_update/katesession_migration.upd
+%{_datadir}/kconf_update/migrate_kate_sessions_applet_to_kdeplasma-addons.sh
 %{_datadir}/applications/org.kde.kate.desktop
 %{_iconsdir}/hicolor/*/apps/kate.*[gz]
 %{_datadir}/metainfo/org.kde.kate.appdata.xml
-%{_datadir}/metainfo/org.kde.plasma.katesessions.appdata.xml
 %{_mandir}/man1/kate.1.*
 
 #-----------------------------------------------------------------------------
@@ -88,7 +90,6 @@ This package contains the Kate KPart component.
 
 %files -n katepart -f all.lang
 %dir %{_libdir}/qt5/plugins/ktexteditor
-%{_libdir}/qt5/plugins/plasma/dataengine/plasma_engine_katesessions.so
 %dir %{_datadir}/kateproject
 %{_datadir}/kateproject/kateproject.example
 %dir %{_datadir}/katexmltools
@@ -104,14 +105,6 @@ This package contains the Kate KPart component.
 %{_datadir}/katexmltools/xhtml1-strict.dtd.xml
 %{_datadir}/katexmltools/xhtml1-transitional.dtd.xml
 %{_datadir}/katexmltools/xslt-1.0.dtd.xml
-%{_datadir}/kservices5/plasma-dataengine-katesessions.desktop
-%{_datadir}/kservices5/plasma-applet-org.kde.plasma.katesessions.desktop
-%{_datadir}/plasma/plasmoids/org.kde.plasma.katesessions/contents/ui/KateSessionsItemDelegate.qml
-%{_datadir}/plasma/plasmoids/org.kde.plasma.katesessions/contents/ui/Menu.qml
-%{_datadir}/plasma/plasmoids/org.kde.plasma.katesessions/contents/ui/katesessions.qml
-%{_datadir}/plasma/plasmoids/org.kde.plasma.katesessions/metadata.desktop
-%{_datadir}/plasma/plasmoids/org.kde.plasma.katesessions/metadata.json
-%{_datadir}/plasma/services/org.kde.plasma.katesessions.operations
 
 #-----------------------------------------------------------------------------
 %package extensions
@@ -214,11 +207,11 @@ install -m 0644 %{SOURCE1} %{buildroot}%{_datadir}/applications/kwriteroot.deskt
 %find_lang ktexteditorpreviewplugin
 %find_lang kwrite --with-html
 %find_lang lspclient
-%find_lang plasma_applet_org.kde.plasma.katesessions
 %find_lang tabswitcherplugin
 %find_lang kateexternaltoolsplugin
 %find_lang katecolorpickerplugin
 %find_lang kategitblameplugin
+%find_lang katekeyboardmacros
 mv kwrite.lang kwrite_lang
 cat *plugin.lang >plugins_lang
 rm *plugin.lang
