@@ -1,57 +1,12 @@
-diff -up kate-22.07.90/apps/kate/main.cpp.1~ kate-22.07.90/apps/kate/main.cpp
---- kate-22.07.90/apps/kate/main.cpp.1~	2022-08-04 00:43:58.000000000 +0200
-+++ kate-22.07.90/apps/kate/main.cpp	2022-08-06 22:32:22.458222401 +0200
-@@ -44,24 +44,6 @@
+diff -up kate-23.03.90/apps/lib/kateapp.cpp.omv~ kate-23.03.90/apps/lib/kateapp.cpp
+--- kate-23.03.90/apps/lib/kateapp.cpp.omv~	2023-04-15 00:42:00.323296328 +0200
++++ kate-23.03.90/apps/lib/kateapp.cpp	2023-04-15 00:42:14.816422530 +0200
+@@ -98,7 +98,7 @@ Q_LOGGING_CATEGORY(LOG_KATE, "kate", QtW
  
- int main(int argc, char **argv)
+ void KateApp::initPreApplicationCreation(bool detach)
  {
 -#if !defined(Q_OS_WIN) && !defined(Q_OS_HAIKU)
--    // Prohibit using sudo or kdesu (but allow using the root user directly)
--    if (getuid() == 0) {
--        if (!qEnvironmentVariableIsEmpty("SUDO_USER")) {
--            std::cout << "Running Kate with sudo can cause bugs and expose you to security vulnerabilities. "
--                         "Instead use Kate normally and you will be prompted for elevated privileges when "
--                         "saving documents if needed."
--                      << std::endl;
--            return EXIT_FAILURE;
--        } else if (!qEnvironmentVariableIsEmpty("KDESU_USER")) {
--            std::cout << "Running Kate with kdesu can cause bugs and expose you to security vulnerabilities. "
--                         "Instead use Kate normally and you will be prompted for elevated privileges when "
--                         "saving documents if needed."
--                      << std::endl;
--            return EXIT_FAILURE;
--        }
--    }
--#endif
-     /**
-      * init resources from our static lib
-      */
-diff -up kate-22.07.90/apps/kwrite/main.cpp.1~ kate-22.07.90/apps/kwrite/main.cpp
---- kate-22.07.90/apps/kwrite/main.cpp.1~	2022-08-06 22:32:22.458222401 +0200
-+++ kate-22.07.90/apps/kwrite/main.cpp	2022-08-06 22:32:49.177470666 +0200
-@@ -24,25 +24,6 @@
- 
- extern "C" Q_DECL_EXPORT int main(int argc, char **argv)
- {
--#if !defined(Q_OS_WIN) && !defined(Q_OS_HAIKU)
--    // Prohibit using sudo or kdesu (but allow using the root user directly)
--    if (getuid() == 0) {
--        if (!qEnvironmentVariableIsEmpty("SUDO_USER")) {
--            std::cout << "Running KWrite with sudo can cause bugs and expose you to security vulnerabilities. "
--                         "Instead use KWrite normally and you will be prompted for elevated privileges when "
--                         "saving documents if needed."
--                      << std::endl;
--            return EXIT_FAILURE;
--        } else if (!qEnvironmentVariableIsEmpty("KDESU_USER")) {
--            std::cout << "Running KWrite with kdesu can cause bugs and expose you to security vulnerabilities. "
--                         "Instead use KWrite normally and you will be prompted for elevated privileges when "
--                         "saving documents if needed."
--                      << std::endl;
--            return EXIT_FAILURE;
--        }
--    }
--#endif
--
- #if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-     /**
-      * enable high dpi support
++#if !defined(Q_OS_WIN) && !defined(Q_OS_HAIKU) && 0
+     // Prohibit using sudo or kdesu (but allow using the root user directly)
+     if (getuid() == 0) {
+         setlocale(LC_ALL, "");
