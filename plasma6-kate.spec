@@ -54,6 +54,7 @@ BuildRequires:	vulkan-devel
 BuildRequires:	cmake(KUserFeedbackQt6)
 BuildRequires:	cmake(KF6DocTools)
 BuildRequires:	cmake(KF6Bookmarks)
+BuildRequires:	%mklibname -d KF6IconWidgets
 BuildRequires:	desktop-file-utils
 BuildRequires:	pkgconfig(hunspell)
 BuildRequires:	pkgconfig(libxslt)
