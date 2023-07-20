@@ -19,6 +19,7 @@ Patch1:		kate-20230720-compile.patch
 BuildRequires:	binutils-devel
 BuildRequires:	boost-devel
 BuildRequires:	cmake(ECM)
+BuildRequires:	cmake(Qt6)
 BuildRequires:	cmake(Qt6Core)
 BuildRequires:	cmake(Qt6Concurrent)
 BuildRequires:	cmake(Qt6DBus)
