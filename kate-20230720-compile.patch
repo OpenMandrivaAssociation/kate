@@ -1,0 +1,17 @@
+diff -up kate-master/addons/filetree/autotests/document_dummy.h.omv~ kate-master/addons/filetree/autotests/document_dummy.h
+--- kate-master/addons/filetree/autotests/document_dummy.h.omv~	2023-07-20 21:51:26.532981051 +0200
++++ kate-master/addons/filetree/autotests/document_dummy.h	2023-07-20 21:51:35.328071518 +0200
+@@ -660,11 +660,11 @@ public:
+     {
+     }
+ 
+-    virtual qsizetype cursorToOffset(KTextEditor::Cursor) const override
++    virtual qsizetype cursorToOffset(KTextEditor::Cursor) const
+     {
+         return 0;
+     }
+-    virtual KTextEditor::Cursor offsetToCursor(qsizetype) const override
++    virtual KTextEditor::Cursor offsetToCursor(qsizetype) const
+     {
+         return {};
+     }

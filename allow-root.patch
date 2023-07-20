@@ -1,0 +1,12 @@
+diff -up kate-23.03.90/apps/lib/kateapp.cpp.omv~ kate-23.03.90/apps/lib/kateapp.cpp
+--- kate-23.03.90/apps/lib/kateapp.cpp.omv~	2023-04-15 00:42:00.323296328 +0200
++++ kate-23.03.90/apps/lib/kateapp.cpp	2023-04-15 00:42:14.816422530 +0200
+@@ -98,7 +98,7 @@ Q_LOGGING_CATEGORY(LOG_KATE, "kate", QtW
+ 
+ void KateApp::initPreApplicationCreation(bool detach)
+ {
+-#if !defined(Q_OS_WIN) && !defined(Q_OS_HAIKU)
++#if !defined(Q_OS_WIN) && !defined(Q_OS_HAIKU) && 0
+     // Prohibit using sudo or kdesu (but allow using the root user directly)
+     if (getuid() == 0) {
+         setlocale(LC_ALL, "");
