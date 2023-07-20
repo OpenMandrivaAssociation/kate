@@ -4,7 +4,7 @@
 Summary:	Advanced text editor
 Name:		plasma6-kate
 Version:	23.07.90
-Release:	%{?git:0.%{git}.}1
+Release:	%{?git:0.%{git}.}2
 License:	GPLv2+ LGPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://kate-editor.org/
@@ -59,7 +59,7 @@ BuildRequires:	desktop-file-utils
 BuildRequires:	pkgconfig(hunspell)
 BuildRequires:	pkgconfig(libxslt)
 BuildRequires:	pkgconfig(python)
-Requires:	plasma6-konsole >= 1:16.04.1
+Requires:	plasma6-konsole
 Requires:	plasma6-katepart = %{EVRD}
 Requires:	%{name}-extensions = %{EVRD}
 # For optional features
