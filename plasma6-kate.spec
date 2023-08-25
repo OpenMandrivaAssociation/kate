@@ -1,5 +1,5 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
-%define git 20230819
+%define git 20230825
 
 Summary:	Advanced text editor
 Name:		plasma6-kate
@@ -84,6 +84,7 @@ A fast and advanced text editor with nice plugins for KDE 6.
 %{_datadir}/applications/org.kde.kate.desktop
 %{_iconsdir}/hicolor/*/apps/kate.*[gz]
 %{_datadir}/metainfo/org.kde.kate.appdata.xml
+%{_libdir}/qt6/plugins/kf6/ktexteditor/katefilebrowserplugin.so
 %{_mandir}/man1/kate.1.*
 
 #-----------------------------------------------------------------------------
