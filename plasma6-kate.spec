@@ -1,5 +1,5 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
-%define git 20231023
+%define git 20231104
 
 Summary:	Advanced text editor
 Name:		plasma6-kate
@@ -97,7 +97,6 @@ Group:		Graphical desktop/KDE
 This package contains the Kate KPart component.
 
 %files -n plasma6-katepart -f all.lang
-%dir %{_qtdir}/plugins/ktexteditor
 %dir %{_qtdir}/plugins/kf6/ktexteditor
 %dir %{_datadir}/kateproject
 %{_datadir}/kateproject/kateproject.example
@@ -125,6 +124,7 @@ Requires:	%{name}
 Extensions for the Kate editor.
 
 %files extensions -f plugins_lang
+%{_qtdir}/plugins/kf6/ktexteditor/cmaketoolsplugin.so
 %{_qtdir}/plugins/kf6/ktexteditor/compilerexplorer.so
 %{_qtdir}/plugins/kf6/ktexteditor/eslintplugin.so
 %{_qtdir}/plugins/kf6/ktexteditor/externaltoolsplugin.so
@@ -153,7 +153,6 @@ Extensions for the Kate editor.
 %{_qtdir}/plugins/kf6/ktexteditor/rainbowparens.so
 %{_qtdir}/plugins/kf6/ktexteditor/tabswitcherplugin.so
 %{_qtdir}/plugins/kf6/ktexteditor/textfilterplugin.so
-%{_qtdir}/plugins/ktexteditor/cmaketoolsplugin.so
 
 #-----------------------------------------------------------------------------
 
