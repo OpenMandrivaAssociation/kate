@@ -1,9 +1,9 @@
-%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
-%define git 20231104
+%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
+#define git 20231104
 
 Summary:	Advanced text editor
 Name:		plasma6-kate
-Version:	23.07.90
+Version:	24.01.75
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+ LGPLv2+
 Group:		Graphical desktop/KDE
@@ -11,7 +11,7 @@ Url:		http://kate-editor.org/
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/utilities/kate/-/archive/master/kate-master.tar.bz2#/kate-%{git}.tar.bz2
 %else
-Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/kate-%{version}.tar.xz
 %endif
 Source1:	kwriteroot.desktop
 Patch0:		https://gitweb.frugalware.org/frugalware-current/raw/master/source/kde5/kate/allow-root.patch
