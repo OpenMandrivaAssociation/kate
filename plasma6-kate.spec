@@ -3,7 +3,7 @@
 
 Summary:	Advanced text editor
 Name:		plasma6-kate
-Version:	24.01.75
+Version:	24.01.80
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+ LGPLv2+
 Group:		Graphical desktop/KDE
@@ -47,7 +47,7 @@ BuildRequires:	cmake(KF6TextWidgets)
 BuildRequires:	cmake(KF6WindowSystem)
 BuildRequires:	cmake(KF6XmlGui)
 BuildRequires:	cmake(KF6NewStuff)
-BuildRequires:	cmake(KF6Activities)
+BuildRequires:	cmake(PlasmaActivities)
 BuildRequires:	cmake(KF6DBusAddons)
 BuildRequires:	cmake(KF6MoreTools)
 BuildRequires:	vulkan-devel
@@ -64,7 +64,7 @@ Requires:	plasma6-katepart = %{EVRD}
 Requires:	%{name}-extensions = %{EVRD}
 # For optional features
 BuildRequires:	cmake(KF6Wallet)
-BuildRequires:	cmake(KF6Plasma)
+BuildRequires:	cmake(Plasma) >= 5.90.0
 BuildRequires:	cmake(KF6Service)
 BuildRequires:	cmake(KF6ItemModels)
 BuildRequires:	cmake(KF6Notifications)
@@ -200,6 +200,7 @@ desktop-file-install    --remove-category="Development;" \
 
 install -m 0644 %{SOURCE1} %{buildroot}%{_datadir}/applications/kwriteroot.desktop
 
+%find_lang formatplugin
 %find_lang kate-ctags-plugin
 %find_lang kate-replicode-plugin
 %find_lang kate --with-man --with-html
@@ -227,6 +228,7 @@ install -m 0644 %{SOURCE1} %{buildroot}%{_datadir}/applications/kwriteroot.deskt
 %find_lang katecolorpickerplugin
 %find_lang kategitblameplugin
 %find_lang katekeyboardmacros
+%find_lang rainbowparens
 mv kwrite.lang kwrite_lang
 cat *plugin.lang >plugins_lang
 rm *plugin.lang
