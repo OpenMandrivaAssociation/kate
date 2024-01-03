@@ -3,7 +3,7 @@
 Summary:	Advanced text editor
 Name:		kate
 Version:	23.08.4
-Release:	1
+Release:	2
 Epoch:		3
 License:	GPLv2+ LGPLv2+
 Group:		Graphical desktop/KDE
