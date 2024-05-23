@@ -5,7 +5,7 @@
 
 Summary:	Advanced text editor
 Name:		plasma6-kate
-Version:	24.02.2
+Version:	24.05.0
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+ LGPLv2+
 Group:		Graphical desktop/KDE
@@ -155,6 +155,7 @@ Extensions for the Kate editor.
 %{_qtdir}/plugins/kf6/ktexteditor/rainbowparens.so
 %{_qtdir}/plugins/kf6/ktexteditor/tabswitcherplugin.so
 %{_qtdir}/plugins/kf6/ktexteditor/textfilterplugin.so
+%{_qtdir}/plugins/kf6/ktexteditor/rbqlplugin.so
 
 #-----------------------------------------------------------------------------
 
@@ -231,6 +232,7 @@ install -m 0644 %{SOURCE1} %{buildroot}%{_datadir}/applications/kwriteroot.deskt
 %find_lang kategitblameplugin
 %find_lang katekeyboardmacros
 %find_lang rainbowparens
+%find_lang rbqlplugin
 mv kwrite.lang kwrite_lang
 cat *plugin.lang >plugins_lang
 rm *plugin.lang
