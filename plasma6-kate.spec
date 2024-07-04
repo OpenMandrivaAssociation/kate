@@ -5,7 +5,7 @@
 
 Summary:	Advanced text editor
 Name:		plasma6-kate
-Version:	24.05.1
+Version:	24.05.2
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+ LGPLv2+
 Group:		Graphical desktop/KDE
