@@ -5,7 +5,7 @@
 
 Summary:	Advanced text editor
 Name:		plasma6-kate
-Version:	24.05.2
+Version:	24.08.0
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+ LGPLv2+
 Group:		Graphical desktop/KDE
@@ -86,7 +86,8 @@ A fast and advanced text editor with nice plugins for KDE 6.
 %{_datadir}/applications/org.kde.kate.desktop
 %{_iconsdir}/hicolor/*/apps/kate.*[gz]
 %{_datadir}/metainfo/org.kde.kate.appdata.xml
-%{_libdir}/qt6/plugins/kf6/ktexteditor/katefilebrowserplugin.so
+%{_qtdir}/plugins/kf6/ktexteditor/katefilebrowserplugin.so
+%{_qtdir}/plugins/kf6/ktexteditor/katesqlplugin.so
 %{_mandir}/man1/kate.1.*
 
 #-----------------------------------------------------------------------------
@@ -207,6 +208,7 @@ install -m 0644 %{SOURCE1} %{buildroot}%{_datadir}/applications/kwriteroot.deskt
 %find_lang kate-ctags-plugin
 %find_lang kate-replicode-plugin
 %find_lang kate --with-man --with-html
+%find_lang katecompilerexplorer
 %find_lang katepart --with-html
 %find_lang katebacktracebrowserplugin
 %find_lang katebuild-plugin
