@@ -9,7 +9,7 @@ Version:	24.08.2
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+ LGPLv2+
 Group:		Graphical desktop/KDE
-Url:		http://kate-editor.org/
+Url:		https://kate-editor.org/
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/utilities/kate/-/archive/%{gitbranch}/kate-%{gitbranchd}.tar.bz2#/kate-%{git}.tar.bz2
 %else
