@@ -7,7 +7,7 @@ Release:	2
 Epoch:		3
 License:	GPLv2+ LGPLv2+
 Group:		Graphical desktop/KDE
-Url:		http://kate-editor.org/
+Url:		https://kate-editor.org/
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 Source1:	kwriteroot.desktop
 Source10:	%{name}.rpmlintrc
