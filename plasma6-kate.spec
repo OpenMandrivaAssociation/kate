@@ -5,8 +5,8 @@
 
 Summary:	Advanced text editor
 Name:		plasma6-kate
-Version:	24.08.3
-Release:	%{?git:0.%{git}.}2
+Version:	24.12.0
+Release:	%{?git:0.%{git}.}1
 License:	GPLv2+ LGPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://kate-editor.org/
@@ -17,7 +17,6 @@ Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/kate-%
 %endif
 Source1:	kwriteroot.desktop
 Patch0:		https://gitweb.frugalware.org/frugalware-current/raw/%{gitbranchd}/source/kde5/kate/allow-root.patch
-Patch1:		kate-20230720-compile.patch
 BuildRequires:	binutils-devel
 BuildRequires:	boost-devel
 BuildRequires:	cmake(ECM)
