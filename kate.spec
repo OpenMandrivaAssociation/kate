@@ -4,7 +4,7 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 
 Summary:	Advanced text editor
-Name:		plasma6-kate
+Name:		kate
 Version:	25.04.0
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+ LGPLv2+
