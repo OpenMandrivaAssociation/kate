@@ -5,7 +5,7 @@
 
 Summary:	Advanced text editor
 Name:		kate
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+ LGPLv2+
 Group:		Graphical desktop/KDE
@@ -76,6 +76,8 @@ BuildRequires:	cmake(KF6TextEditor)
 BuildRequires:	pkgconfig(libgit2) >= 0.26.0
 # Just to prevent pulling in the KF5 version
 BuildRequires:	plasma6-xdg-desktop-portal-kde
+
+%rename plasma6-kate
 
 %description
 A fast and advanced text editor with nice plugins for KDE 6.
