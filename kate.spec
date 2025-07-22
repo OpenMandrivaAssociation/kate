@@ -95,14 +95,15 @@ A fast and advanced text editor with nice plugins for KDE 6.
 
 #-----------------------------------------------------------------------------
 
-%package -n plasma6-katepart
+%package -n katepart
 Summary:	Kate KPart
 Group:		Graphical desktop/KDE
+%rename plasma6-katepart
 
-%description -n plasma6-katepart
+%description -n katepart
 This package contains the Kate KPart component.
 
-%files -n plasma6-katepart -f all.lang
+%files -n katepart -f all.lang
 %dir %{_qtdir}/plugins/kf6/ktexteditor
 %dir %{_datadir}/kateproject
 %{_datadir}/kateproject/kateproject.example
@@ -124,7 +125,8 @@ This package contains the Kate KPart component.
 %package extensions
 Summary:	Extensions for the Kate editor
 Group:		Graphical desktop/KDE
-Requires:	%{name}
+Requires:	%{name} = %{EVRD}
+%rename plasma6-kate-extensions
 
 %description extensions
 Extensions for the Kate editor.
@@ -163,13 +165,14 @@ Extensions for the Kate editor.
 
 #-----------------------------------------------------------------------------
 
-%package -n plasma6-kwrite
+%package -n kwrite
 Summary:	Simple text editor for KDE 5
 Group:		Graphical desktop/KDE
-Requires:	plasma6-katepart = %{EVRD}
+Requires:	katepart = %{EVRD}
 Suggests:	%{name}-extensions
+%rename plasma6-kwrite
 
-%description -n plasma6-kwrite
+%description -n kwrite
 KWrite is a text editor for KDE, based on the Kate's editor component.
 Features :
     Syntax highlighting according to the file type
@@ -178,7 +181,7 @@ Features :
     Plugin support
     Vi input mode
 
-%files -n plasma6-kwrite -f kwrite_lang
+%files -n kwrite -f kwrite_lang
 %{_bindir}/kwrite
 %{_datadir}/applications/kwriteroot.desktop
 %{_datadir}/applications/org.kde.kwrite.desktop
