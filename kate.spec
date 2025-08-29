@@ -5,7 +5,7 @@
 
 Summary:	Advanced text editor
 Name:		kate
-Version:	25.04.3
+Version:	25.08.0
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+ LGPLv2+
 Group:		Graphical desktop/KDE
@@ -132,6 +132,7 @@ Requires:	%{name} = %{EVRD}
 Extensions for the Kate editor.
 
 %files extensions -f plugins_lang
+%{_qtdir}/plugins/kf6/ktexteditor/bookmarksplugin.so
 %{_qtdir}/plugins/kf6/ktexteditor/cmaketoolsplugin.so
 %{_qtdir}/plugins/kf6/ktexteditor/compilerexplorer.so
 %{_qtdir}/plugins/kf6/ktexteditor/eslintplugin.so
@@ -218,6 +219,7 @@ install -m 0644 %{SOURCE1} %{buildroot}%{_datadir}/applications/kwriteroot.deskt
 %find_lang katepart --with-html
 %find_lang katebacktracebrowserplugin
 %find_lang katebuild-plugin
+%find_lang katebookmarksplugin
 %find_lang katecloseexceptplugin
 %find_lang katefilebrowserplugin
 %find_lang katefiletree
