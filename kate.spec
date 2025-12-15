@@ -5,8 +5,8 @@
 
 Summary:	Advanced text editor
 Name:		kate
-Version:	25.08.3
-Release:	%{?git:0.%{git}.}2
+Version:	25.12.0
+Release:	%{?git:0.%{git}.}1
 License:	GPLv2+ LGPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://kate-editor.org/
@@ -83,6 +83,7 @@ BuildRequires:	plasma6-xdg-desktop-portal-kde
 A fast and advanced text editor with nice plugins for KDE 6.
 
 %files
+%{_bindir}/exec_inspect.sh
 %{_bindir}/kate
 %{_libdir}/libkateprivate.so.*
 %{_datadir}/applications/org.kde.kate.desktop
@@ -91,6 +92,7 @@ A fast and advanced text editor with nice plugins for KDE 6.
 %{_qtdir}/plugins/kf6/ktexteditor/katefilebrowserplugin.so
 %{_qtdir}/plugins/kf6/ktexteditor/katesqlplugin.so
 %{_qtdir}/plugins/kf6/ktexteditor/templateplugin.so
+%{_qtdir}/plugins/kf6/kio/kio_kateexec.so
 %{_mandir}/man1/kate.1.*
 
 #-----------------------------------------------------------------------------
@@ -145,6 +147,7 @@ Extensions for the Kate editor.
 %{_qtdir}/plugins/kf6/ktexteditor/katectagsplugin.so
 %{_qtdir}/plugins/kf6/ktexteditor/katefiletreeplugin.so
 %{_qtdir}/plugins/kf6/ktexteditor/kategdbplugin.so
+%{_qtdir}/plugins/kf6/ktexteditor/kategpgplugin.so
 %{_qtdir}/plugins/kf6/ktexteditor/kategitblameplugin.so
 %{_qtdir}/plugins/kf6/ktexteditor/katekonsoleplugin.so
 %{_qtdir}/plugins/kf6/ktexteditor/kateprojectplugin.so
@@ -239,6 +242,7 @@ install -m 0644 %{SOURCE1} %{buildroot}%{_datadir}/applications/kwriteroot.deskt
 %find_lang tabswitcherplugin
 %find_lang kateexternaltoolsplugin
 %find_lang katecolorpickerplugin
+%find_lang kategpgplugin
 %find_lang kategitblameplugin
 %find_lang katekeyboardmacros
 %find_lang rainbowparens
