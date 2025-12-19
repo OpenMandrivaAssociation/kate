@@ -56,13 +56,14 @@ BuildRequires:	vulkan-devel
 BuildRequires:	cmake(KUserFeedbackQt6)
 BuildRequires:	cmake(KF6DocTools)
 BuildRequires:	cmake(KF6Bookmarks)
+BuildRequires:	pkgconfig(gpgmepp)
 BuildRequires:	%mklibname -d KF6IconWidgets
 BuildRequires:	desktop-file-utils
 BuildRequires:	pkgconfig(hunspell)
 BuildRequires:	pkgconfig(libxslt)
 BuildRequires:	pkgconfig(python)
-Requires:	plasma6-konsole
-Requires:	plasma6-katepart = %{EVRD}
+Requires:	konsole
+Requires:	katepart = %{EVRD}
 Requires:	%{name}-extensions = %{EVRD}
 # For optional features
 BuildRequires:	cmake(KF6Wallet)
