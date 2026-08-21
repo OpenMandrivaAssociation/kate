@@ -5,7 +5,7 @@
 
 Summary:	Advanced text editor
 Name:		kate
-Version:	26.04.3
+Version:	26.08.0
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+ LGPLv2+
 Group:		Graphical desktop/KDE
@@ -167,6 +167,7 @@ Extensions for the Kate editor.
 %{_qtdir}/plugins/kf6/ktexteditor/tabswitcherplugin.so
 %{_qtdir}/plugins/kf6/ktexteditor/textfilterplugin.so
 %{_qtdir}/plugins/kf6/ktexteditor/rbqlplugin.so
+%{_qtdir}/plugins/kf6/ktexteditor/kateshownonprintableplugin.so
 
 #-----------------------------------------------------------------------------
 
@@ -248,6 +249,7 @@ install -m 0644 %{SOURCE1} %{buildroot}%{_datadir}/applications/kwriteroot.deskt
 %find_lang katekeyboardmacros
 %find_lang rainbowparens
 %find_lang rbqlplugin
+%find_lang kateshownonprintableplugin
 mv kwrite.lang kwrite_lang
 cat *plugin.lang >plugins_lang
 rm *plugin.lang
