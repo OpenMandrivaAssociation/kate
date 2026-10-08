@@ -5,8 +5,8 @@
 
 Summary:	Advanced text editor
 Name:		kate
-Version:	26.08.1
-Release:	%{?git:0.%{git}.}2
+Version:	26.08.2
+Release:	%{?git:0.%{git}.}1
 License:	GPLv2+ LGPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://kate-editor.org/
