@@ -5,7 +5,7 @@
 
 Summary:	Advanced text editor
 Name:		kate
-Version:	26.08.2
+Version:	26.08.3
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+ LGPLv2+
 Group:		Graphical desktop/KDE
@@ -16,7 +16,7 @@ Source0:	https://invent.kde.org/utilities/kate/-/archive/%{gitbranch}/kate-%{git
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/kate-%{version}.tar.xz
 %endif
 Source1:	kwriteroot.desktop
-Patch0:		https://gitweb.frugalware.org/frugalware-current/raw/%{gitbranchd}/source/kde5/kate/allow-root.patch
+Patch0:		allow-root.patch
 BuildRequires:	binutils-devel
 BuildRequires:	boost-devel
 BuildRequires:	cmake(ECM)
